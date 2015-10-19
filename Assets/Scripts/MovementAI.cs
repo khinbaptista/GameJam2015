@@ -9,6 +9,7 @@ public class MovementAI : MonoBehaviour {
 
 	public float moveSpeed;
 	public float maxDistance;
+	public float minDistance;
 	public Transform target;
 
 	void Start () {
@@ -16,8 +17,10 @@ public class MovementAI : MonoBehaviour {
 	}
 	
 	void Update() {
-		if (Vector3.Distance(target.position, transform.position) > maxDistance)
+		float distance = Vector3.Distance(target.position, transform.position);
+		if (distance > maxDistance && distance < minDistance)
 		{
+
 			// Get a direction vector from us to the target
 			Vector3 dir = target.position - transform.position;
 			
