@@ -11,7 +11,6 @@ public class Attack : MonoBehaviour
 
 	public void Awake(){
 		animator = gameObject.GetComponent<Animator> ();
-		Debug.Log (animator);
 		areaOfEffect.enabled = false;
 	}
 
