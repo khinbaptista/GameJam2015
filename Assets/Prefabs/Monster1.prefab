@@ -32,6 +32,7 @@ GameObject:
   - 114: {fileID: 11489254}
   - 212: {fileID: 21249250}
   - 95: {fileID: 9529222}
+  - 114: {fileID: 11477588}
   m_Layer: 0
   m_Name: Monster1
   m_TagString: Untagged
@@ -222,6 +223,21 @@ MonoBehaviour:
   target: {fileID: 0}
   animator: {fileID: 0}
   attack: {fileID: 0}
+--- !u!114 &11477588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa4575ada28c91409bdf07acbdc7c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HP: 20
+  moveRate: 0
+  damageAmount: 0
+  isAttacking: 0
 --- !u!114 &11489254
 MonoBehaviour:
   m_ObjectHideFlags: 1

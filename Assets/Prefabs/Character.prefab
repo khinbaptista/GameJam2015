@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11406690}
   - 114: {fileID: 11440968}
   - 114: {fileID: 11411364}
+  - 114: {fileID: 11445216}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -46,6 +47,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 412022}
   - 61: {fileID: 6141858}
+  - 114: {fileID: 11491960}
   m_Layer: 0
   m_Name: AttackTrigger
   m_TagString: Untagged
@@ -72,8 +74,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.22587109, y: -1.82910025, z: -1}
-  m_LocalScale: {x: .25, y: .25, z: .25}
+  m_LocalPosition: {x: -8.18000031, y: 2.03999996, z: -1}
+  m_LocalScale: {x: .503440976, y: .503440976, z: .503440976}
   m_Children:
   - {fileID: 464864}
   - {fileID: 412022}
@@ -198,6 +200,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaOfEffect: {fileID: 6141858}
+--- !u!114 &11445216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e97afcc605b7c499415544e8bcd94b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HP: 20
+  moveRate: 0
+  damageAmount: 5
+  isAttacking: 0
+--- !u!114 &11491960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3626d3c055b8274980f41f5c091430c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPower: 10
 --- !u!212 &21257592
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour, IHitable {
 	public float moveRate;
 	public float damageAmount;
 	public bool isAttacking = false;
+	private Animator animator;
 
 	private MovementAI movement;
 
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour, IHitable {
 	// Use this for initialization
 	void Start () {
 		movement = GetComponent<MovementAI>();
+		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -26,6 +28,9 @@ public class Enemy : MonoBehaviour, IHitable {
 	}
 
 	public void OnHit(float attackPower) {
-
+		_HP -= attackPower;
+		if (_HP < 0) {
+			animator.SetTrigger("Death");
+		}
 	}
 }
