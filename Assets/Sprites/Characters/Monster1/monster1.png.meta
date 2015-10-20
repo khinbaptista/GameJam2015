@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 15565c6c5814f23438e4150f33ac321d
-timeCreated: 1445299789
+timeCreated: 1445343127
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -139,8 +139,8 @@ TextureImporter:
         y: 1153
         width: 90
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_1
       rect:
@@ -149,8 +149,8 @@ TextureImporter:
         y: 1153
         width: 90
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_2
       rect:
@@ -159,8 +159,8 @@ TextureImporter:
         y: 1153
         width: 90
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_3
       rect:
@@ -169,8 +169,8 @@ TextureImporter:
         y: 1153
         width: 90
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_4
       rect:
@@ -179,8 +179,8 @@ TextureImporter:
         y: 1153
         width: 90
         height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_5
       rect:
@@ -189,8 +189,8 @@ TextureImporter:
         y: 1153
         width: 90
         height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_6
       rect:
@@ -199,8 +199,8 @@ TextureImporter:
         y: 1153
         width: 90
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_7
       rect:
@@ -209,8 +209,8 @@ TextureImporter:
         y: 1153
         width: 90
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_8
       rect:
@@ -219,8 +219,8 @@ TextureImporter:
         y: 1025
         width: 66
         height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_9
       rect:
@@ -229,8 +229,8 @@ TextureImporter:
         y: 1025
         width: 74
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_10
       rect:
@@ -239,8 +239,8 @@ TextureImporter:
         y: 1025
         width: 92
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_11
       rect:
@@ -249,8 +249,8 @@ TextureImporter:
         y: 1025
         width: 114
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_12
       rect:
@@ -259,8 +259,8 @@ TextureImporter:
         y: 1024
         width: 108
         height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_13
       rect:
@@ -269,8 +269,8 @@ TextureImporter:
         y: 1026
         width: 114
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_14
       rect:
@@ -279,8 +279,8 @@ TextureImporter:
         y: 1026
         width: 92
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_15
       rect:
@@ -289,8 +289,8 @@ TextureImporter:
         y: 1026
         width: 74
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_16
       rect:
@@ -299,8 +299,8 @@ TextureImporter:
         y: 1026
         width: 66
         height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_17
       rect:
@@ -309,8 +309,8 @@ TextureImporter:
         y: 897
         width: 69
         height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_18
       rect:
@@ -319,8 +319,8 @@ TextureImporter:
         y: 896
         width: 103
         height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_19
       rect:
@@ -329,8 +329,8 @@ TextureImporter:
         y: 896
         width: 97
         height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_20
       rect:
@@ -339,8 +339,8 @@ TextureImporter:
         y: 896
         width: 85
         height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_21
       rect:
@@ -349,8 +349,8 @@ TextureImporter:
         y: 896
         width: 90
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_22
       rect:
@@ -359,8 +359,8 @@ TextureImporter:
         y: 780
         width: 61
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_23
       rect:
@@ -369,8 +369,8 @@ TextureImporter:
         y: 771
         width: 74
         height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_24
       rect:
@@ -379,8 +379,8 @@ TextureImporter:
         y: 771
         width: 68
         height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_25
       rect:
@@ -389,8 +389,8 @@ TextureImporter:
         y: 768
         width: 112
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_26
       rect:
@@ -399,8 +399,8 @@ TextureImporter:
         y: 769
         width: 112
         height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_27
       rect:
@@ -409,8 +409,8 @@ TextureImporter:
         y: 768
         width: 112
         height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_28
       rect:
@@ -419,8 +419,8 @@ TextureImporter:
         y: 768
         width: 80
         height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_29
       rect:
@@ -429,8 +429,8 @@ TextureImporter:
         y: 768
         width: 80
         height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_30
       rect:
@@ -439,8 +439,8 @@ TextureImporter:
         y: 652
         width: 61
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_31
       rect:
@@ -449,8 +449,8 @@ TextureImporter:
         y: 643
         width: 61
         height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_32
       rect:
@@ -459,8 +459,8 @@ TextureImporter:
         y: 643
         width: 65
         height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_33
       rect:
@@ -469,8 +469,8 @@ TextureImporter:
         y: 640
         width: 112
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_34
       rect:
@@ -479,8 +479,8 @@ TextureImporter:
         y: 641
         width: 112
         height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_35
       rect:
@@ -489,8 +489,8 @@ TextureImporter:
         y: 640
         width: 112
         height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_36
       rect:
@@ -499,8 +499,8 @@ TextureImporter:
         y: 646
         width: 70
         height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_37
       rect:
@@ -509,8 +509,8 @@ TextureImporter:
         y: 646
         width: 70
         height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_38
       rect:
@@ -519,8 +519,8 @@ TextureImporter:
         y: 513
         width: 68
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_39
       rect:
@@ -529,8 +529,8 @@ TextureImporter:
         y: 518
         width: 63
         height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_40
       rect:
@@ -539,8 +539,8 @@ TextureImporter:
         y: 512
         width: 62
         height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_41
       rect:
@@ -549,8 +549,8 @@ TextureImporter:
         y: 512
         width: 62
         height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_42
       rect:
@@ -559,8 +559,8 @@ TextureImporter:
         y: 513
         width: 62
         height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_43
       rect:
@@ -569,8 +569,8 @@ TextureImporter:
         y: 518
         width: 62
         height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_44
       rect:
@@ -579,8 +579,8 @@ TextureImporter:
         y: 512
         width: 62
         height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_45
       rect:
@@ -589,8 +589,8 @@ TextureImporter:
         y: 512
         width: 65
         height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_46
       rect:
@@ -599,8 +599,8 @@ TextureImporter:
         y: 384
         width: 69
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_47
       rect:
@@ -609,8 +609,8 @@ TextureImporter:
         y: 386
         width: 68
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_48
       rect:
@@ -619,8 +619,8 @@ TextureImporter:
         y: 386
         width: 66
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_49
       rect:
@@ -629,8 +629,8 @@ TextureImporter:
         y: 385
         width: 68
         height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_50
       rect:
@@ -639,8 +639,8 @@ TextureImporter:
         y: 384
         width: 69
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_51
       rect:
@@ -649,8 +649,8 @@ TextureImporter:
         y: 386
         width: 68
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_52
       rect:
@@ -659,8 +659,8 @@ TextureImporter:
         y: 386
         width: 66
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_53
       rect:
@@ -669,8 +669,8 @@ TextureImporter:
         y: 385
         width: 68
         height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_54
       rect:
@@ -679,8 +679,8 @@ TextureImporter:
         y: 257
         width: 90
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_55
       rect:
@@ -689,8 +689,8 @@ TextureImporter:
         y: 256
         width: 91
         height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_56
       rect:
@@ -699,8 +699,8 @@ TextureImporter:
         y: 256
         width: 88
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_57
       rect:
@@ -709,8 +709,8 @@ TextureImporter:
         y: 256
         width: 89
         height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_58
       rect:
@@ -719,8 +719,8 @@ TextureImporter:
         y: 256
         width: 90
         height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_59
       rect:
@@ -729,8 +729,8 @@ TextureImporter:
         y: 256
         width: 88
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_60
       rect:
@@ -739,8 +739,8 @@ TextureImporter:
         y: 256
         width: 89
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_61
       rect:
@@ -749,8 +749,8 @@ TextureImporter:
         y: 256
         width: 88
         height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_62
       rect:
@@ -759,8 +759,8 @@ TextureImporter:
         y: 130
         width: 71
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_63
       rect:
@@ -769,8 +769,8 @@ TextureImporter:
         y: 135
         width: 71
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_64
       rect:
@@ -779,8 +779,8 @@ TextureImporter:
         y: 135
         width: 71
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_65
       rect:
@@ -789,8 +789,8 @@ TextureImporter:
         y: 132
         width: 71
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_66
       rect:
@@ -799,8 +799,8 @@ TextureImporter:
         y: 129
         width: 71
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_67
       rect:
@@ -809,8 +809,8 @@ TextureImporter:
         y: 130
         width: 71
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_68
       rect:
@@ -819,8 +819,8 @@ TextureImporter:
         y: 135
         width: 71
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_69
       rect:
@@ -829,8 +829,8 @@ TextureImporter:
         y: 135
         width: 71
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_70
       rect:
@@ -839,8 +839,8 @@ TextureImporter:
         y: 132
         width: 71
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_71
       rect:
@@ -849,8 +849,8 @@ TextureImporter:
         y: 129
         width: 71
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_72
       rect:
@@ -859,8 +859,8 @@ TextureImporter:
         y: 2
         width: 81
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_73
       rect:
@@ -869,8 +869,8 @@ TextureImporter:
         y: 7
         width: 71
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_74
       rect:
@@ -879,8 +879,8 @@ TextureImporter:
         y: 7
         width: 79
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_75
       rect:
@@ -889,8 +889,8 @@ TextureImporter:
         y: 4
         width: 85
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_76
       rect:
@@ -899,8 +899,8 @@ TextureImporter:
         y: 1
         width: 89
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_77
       rect:
@@ -909,8 +909,8 @@ TextureImporter:
         y: 2
         width: 87
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_78
       rect:
@@ -919,8 +919,8 @@ TextureImporter:
         y: 7
         width: 90
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_79
       rect:
@@ -929,8 +929,8 @@ TextureImporter:
         y: 7
         width: 88
         height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_80
       rect:
@@ -939,8 +939,8 @@ TextureImporter:
         y: 4
         width: 91
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: monster1_81
       rect:
@@ -949,8 +949,8 @@ TextureImporter:
         y: 1
         width: 87
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -14,7 +14,7 @@ public class MovementAI : MonoBehaviour {
 	public Animator animator;
 
 	void Start () {
-		target = GameObject.Find("hero").transform;
+		target = GameObject.Find("Character").transform;
 		animator = GetComponentInChildren<Animator> ();
 	}
 	
@@ -30,9 +30,13 @@ public class MovementAI : MonoBehaviour {
 			
 			// Move ourselves in that direction
 			transform.position += dir * moveSpeed * Time.deltaTime;
-			animator.SetBool ("Walk", true);
-		} else {
-			animator.SetBool ("Walk", false);
+			animator.SetBool("Walk", true);
+		} else if (distance < maxDistance) {
+			animator.SetBool("Walk", false);
+			animator.SetTrigger("Attack");
+		}
+		else {
+			animator.SetBool("Walk", false);
 		}
 	}
 }
