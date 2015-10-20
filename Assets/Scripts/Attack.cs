@@ -3,9 +3,16 @@ using System.Collections;
 
 public class Attack : MonoBehaviour
 {
+	private bool isAttacking = false;
+	private Animator animator;
 
 	public Collider2D areaOfEffect;
-	public float attackPower;
+
+
+	public void Awake(){
+		animator = gameObject.GetComponent<Animator> ();
+		areaOfEffect.enabled = false;
+	}
 
 	// Use this for initialization
 	void Start() {
@@ -18,19 +25,25 @@ public class Attack : MonoBehaviour
 
 	}
 
+	void FixedUpdate ()	{
+		if ( Input.GetButtonDown ("Fire1") && !isAttacking) {
+			animator.SetTrigger("Attack");
+			Debug.Log("Trigger set");
+
+		}
+		
+	}
+
 	public void AttackStart() {
+		Debug.Log("Atack start");
+		isAttacking = true;
 		areaOfEffect.enabled = true;
 	}
 
 	public void AttackEnd() {
+		Debug.Log("Atack end");
+		isAttacking = false;
 		areaOfEffect.enabled = false;
 	}
 
-	public void OnTriggerEnter2D(Collider2D other) {
-		Enemy enemy = other.gameObject.GetComponent<Enemy>();
-
-		if (!enemy) return;
-
-		enemy.OnHit(attackPower);
-	}
 }
