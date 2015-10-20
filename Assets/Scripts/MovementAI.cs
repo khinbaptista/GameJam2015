@@ -30,7 +30,9 @@ public class MovementAI : MonoBehaviour {
 			
 			// Move ourselves in that direction
 			transform.position += dir * moveSpeed * Time.deltaTime;
-			animator.SetTrigger("Walk");
+			animator.SetBool ("Walk", true);
+		} else {
+			animator.SetBool ("Walk", false);
 		}
 	}
 }
