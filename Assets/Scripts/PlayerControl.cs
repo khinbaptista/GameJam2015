@@ -6,8 +6,9 @@ public class PlayerControl : MonoBehaviour
 	[HideInInspector]
 	public bool facingRight = true;			// For determining which way the player is currently facing.
 	[HideInInspector]
-	public bool jump = false;				// Condition for whether the player should jump.
-	
+	public bool firstJump = false;				// Condition for whether the player should jump.
+	public bool secondJump = false;
+	public bool canSecondJump = true;
 	
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
@@ -41,7 +42,15 @@ public class PlayerControl : MonoBehaviour
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if(Input.GetButtonDown("Jump") && grounded)
-			jump = true;
+			firstJump = true;
+		if (Input.GetButtonDown ("Jump") && !grounded && canSecondJump) {
+			secondJump = true;
+			canSecondJump = false;
+		}
+
+		if (grounded && !canSecondJump) {
+			canSecondJump = true;
+		}
 	}
 	
 	
@@ -72,20 +81,18 @@ public class PlayerControl : MonoBehaviour
 			Flip();
 		
 		// If the player should jump...
-		if(jump)
+		if(firstJump)
 		{
 			// Set the Jump animator trigger parameter.
-			animator.SetTrigger("Jump");
-			
-			// Play a random jump audio clip.
-			//int i = Random.Range(0, jumpClips.Length);
-			//AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
-			
-			// Add a vertical force to the player.
-			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
-			
+			makeJump ();
+				
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
-			jump = false;
+			firstJump = false;
+		} 
+		else if(secondJump)
+		{
+			makeJump ();
+			secondJump = false;
 		}
 	}
 	
@@ -100,42 +107,16 @@ public class PlayerControl : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-	
-	
-	public IEnumerator Taunt()
+
+	void makeJump ()
 	{
-		// Check the random chance of taunting.
-		float tauntChance = Random.Range(0f, 100f);
-		if(tauntChance > tauntProbability)
-		{
-			// Wait for tauntDelay number of seconds.
-			yield return new WaitForSeconds(tauntDelay);
-			
-			// If there is no clip currently playing.
-			//if(!GetComponent<AudioSource>().isPlaying)
-			//{
-			//	// Choose a random, but different taunt.
-			//	tauntIndex = TauntRandom();
-			//	
-			//	// Play the new taunt.
-			//	GetComponent<AudioSource>().clip = taunts[tauntIndex];
-			//	GetComponent<AudioSource>().Play();
-			//}
-		}
-	}
-	
-	
-	/*int TauntRandom()
-	{
-		// Choose a random index of the taunts array.
-		int i = Random.Range(0, taunts.Length);
-		
-		// If it's the same as the previous taunt...
-		if(i == tauntIndex)
-			// ... try another random taunt.
-			return TauntRandom();
-		else
-			// Otherwise return this index.
-			return i;
-	}*/
+		animator.SetTrigger ("Jump");
+		// Play a random jump audio clip.
+		//int i = Random.Range(0, jumpClips.Length);
+		//AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
+		// Add a vertical force to the player.
+		GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0f, jumpForce));
+	}	
+
 }
+		
