@@ -12,10 +12,13 @@ public class MovementAI : MonoBehaviour {
 	public float minDistance;
 	public Transform target;
 	public Animator animator;
+	public AudioSource hitSound;
+	
 
 	void Start () {
 		target = GameObject.Find("Character").transform;
 		animator = GetComponentInChildren<Animator> ();
+		hitSound = GetComponent<AudioSource>();
 	}
 	
 	void Update() {
@@ -34,6 +37,7 @@ public class MovementAI : MonoBehaviour {
 		} else if (distance < maxDistance) {
 			animator.SetBool("Walk", false);
 			animator.SetTrigger("Attack");
+			hitSound.Play();
 		}
 		else {
 			animator.SetBool("Walk", false);
