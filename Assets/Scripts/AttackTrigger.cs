@@ -17,7 +17,7 @@ public class AttackTrigger : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D other) {
 		IHitable enemy = other.gameObject.GetComponent<IHitable>();
-		Debug.Log(enemy);
+		Debug.Log("Enemy hit");
 		if (enemy == null) return;
 		
 		enemy.OnHit(attackPower);
