@@ -14,6 +14,7 @@ GameObject:
   - 212: {fileID: 21257592}
   - 114: {fileID: 11406690}
   - 114: {fileID: 11440968}
+  - 114: {fileID: 11411364}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.56001925, y: 3.08960009, z: -1}
+  m_LocalPosition: {x: -4.22587109, y: -1.82910025, z: -1}
   m_LocalScale: {x: .25, y: .25, z: .25}
   m_Children:
   - {fileID: 464864}
@@ -98,14 +99,14 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127294}
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_IsKinematic: 0
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6141858
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -161,12 +162,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facingRight: 1
-  jump: 0
+  firstJump: 0
+  secondJump: 0
+  canSecondJump: 1
   moveForce: 365
   maxSpeed: 5
   jumpForce: 300
   tauntProbability: 50
   tauntDelay: 1
+--- !u!114 &11411364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8cce82b429039f48b953d789a9a41c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max: 100
+  damageOverTime: 0
+  damageBonus: 0
+  speedBonus: 0
+  poisonLevel: 0
 --- !u!114 &11440968
 MonoBehaviour:
   m_ObjectHideFlags: 1
