@@ -29,9 +29,8 @@ public class Attack : MonoBehaviour
 		if ( Input.GetButtonDown ("Fire1") && !isAttacking) {
 			animator.SetTrigger("Attack");
 			Debug.Log("Trigger set");
-
+			AttackStart();
 		}
-		
 	}
 
 	public void AttackStart() {
