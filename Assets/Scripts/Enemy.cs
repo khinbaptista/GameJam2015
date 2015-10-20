@@ -7,6 +7,7 @@ public abstract class Enemy : MonoBehaviour, IHitable {
 	private float _HP;
 	public float moveRate;
 	public float damageAmount;
+	public bool isAttacking = false;
 
 	public float HP {
 		get { return _HP; }
