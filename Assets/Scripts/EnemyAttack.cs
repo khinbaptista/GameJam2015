@@ -1,48 +1,47 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Attack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
 	private bool isAttacking = false;
 	private Animator animator;
-
+	public AudioSource hitSound;
+	
 	public Collider2D areaOfEffect;
-
-
+	
+	
 	public void Awake(){
 		animator = gameObject.GetComponent<Animator> ();
 		areaOfEffect.enabled = false;
 	}
-
+	
 	// Use this for initialization
 	void Start() {
 		areaOfEffect.isTrigger = true;
 		areaOfEffect.enabled = false;
+		hitSound = GetComponent<AudioSource>();
 	}
-
+	
 	// Update is called once per frame
 	void Update() {
-
+		
 	}
-
-	void FixedUpdate ()	{
-		if ( Input.GetButtonDown ("Fire1") && !isAttacking) {
+	
+	public void AttackStart() {
+		if (!isAttacking) {
+			Debug.Log ("Enemy attack start");
+			isAttacking = true;
+			areaOfEffect.enabled = true;
 			animator.SetTrigger("Attack");
+			hitSound.Play();
 			Debug.Log("Trigger set");
-			AttackStart();
 		}
 	}
-
-	public void AttackStart() {
-		Debug.Log("Atack start");
-		isAttacking = true;
-		areaOfEffect.enabled = true;
-	}
-
+	
 	public void AttackEnd() {
-		Debug.Log("Atack end");
+		Debug.Log("Enemy attack end");
 		isAttacking = false;
 		areaOfEffect.enabled = false;
 	}
-
+	
 }
