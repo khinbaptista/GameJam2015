@@ -13,10 +13,11 @@ public class Poison : MonoBehaviour {
 	private float damageBonus;
 
 	[SerializeField] [Tooltip("this * poison%")] [Range(1f, 5f)]
-	private float speedBonus;
+	private float speedBonus = 2f;
 
 	private Animator anim;
 	
+	[SerializeField] [Range(0, 100)]
 	private float poisonLevel;
 	public float PoisonLevel {
 		set {
