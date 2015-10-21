@@ -93,7 +93,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.65999985, y: -2.75, z: -1}
+  m_LocalPosition: {x: -2.56001925, y: -.50999999, z: -1}
   m_LocalScale: {x: .173093632, y: .173093602, z: .173093602}
   m_Children:
   - {fileID: 464864}
@@ -133,7 +133,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127294}
   m_Mass: 1
-  m_LinearDrag: 5
+  m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 3
   m_IsKinematic: 0
@@ -161,7 +161,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127294}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 85062c47508210b44b8e3aaaf4b77740, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -265,6 +265,8 @@ MonoBehaviour:
   damageOverTime: 0
   damageBonus: 0
   speedBonus: 2.74000001
+  deltaPoison: 5
+  poisonDecreaseRate: 5
   poisonLevel: 9
 --- !u!114 &11440968
 MonoBehaviour:
