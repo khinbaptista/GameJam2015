@@ -514,9 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b98d85a5752da48add940464084812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   StartingSplashPercent: 60
-=======
 --- !u!114 &11452252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -528,7 +526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb19cf0e822fd442acfdf6d9e23f53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
->>>>>>> origin/master
 --- !u!114 &11454186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -679,12 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb1c50fb6c0edf4bba1327844aafa75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  Player: {fileID: 0}
   HpBar: {fileID: 11454186}
-=======
-  player: {fileID: 0}
-  HPBar: {fileID: 11454186}
 --- !u!114 &11474536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -786,7 +778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a8123fea4980f4bb9f857175e1ad61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
->>>>>>> origin/master
 --- !u!114 &11478368
 MonoBehaviour:
   m_ObjectHideFlags: 1

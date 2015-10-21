@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;   
 
 public class HPBarScript : MonoBehaviour {
-    public Player Player;
+    private Player Player;
     public Image HpBar;
     private float _imageMaxSize;
     // Use this for initialization
