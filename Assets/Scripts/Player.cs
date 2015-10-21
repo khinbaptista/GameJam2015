@@ -12,7 +12,7 @@ public class Player : MonoBehaviour, IHitable {
 	public float damageAmount;
 	public bool isAttacking = false;
 
-	private bool isDead {
+	public bool isDead {
 		get { return _HP <= 0.0f; }
 	}
 	

@@ -24,14 +24,16 @@ public class PlayerControl : MonoBehaviour
 	private bool grounded = false;			// Whether or not the player is grounded.
 
 	private Animator animator;                  // Reference to the player's animator component.
-	private Rigidbody2D rigidbody;
+	private Rigidbody2D rigidbody2d;
+	private Player playerHealth;
 	
 	void Awake()
 	{
 		// Setting up references.
 		groundCheck = transform.Find("groundCheck");
 		animator = GetComponent<Animator>();
-		rigidbody = GetComponent<Rigidbody2D>();
+		rigidbody2d = GetComponent<Rigidbody2D>();
+		playerHealth = GetComponent<Player>();
 	}
 	
 	
@@ -96,6 +98,11 @@ public class PlayerControl : MonoBehaviour
 			secondJump = false;
 		}
 	}
+
+	void LateUpdate() {
+		if (playerHealth.isDead)
+			enabled = false;
+	}
 	
 	
 	void Flip ()
@@ -118,7 +125,7 @@ public class PlayerControl : MonoBehaviour
 		//AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
 		
 		// Add a vertical force to the player.
-		rigidbody.AddForce (new Vector2 (0f, jumpForce));
+		rigidbody2d.AddForce (new Vector2 (0f, jumpForce));
 	}	
 
 }
