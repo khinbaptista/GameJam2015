@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour, IHitable {
 
 	public void OnHit(float attackPower) {
 		_currentHp -= attackPower;
-		if (_currentHp < 0) {
+		if (_currentHp <= 0) {
 			animator.SetTrigger("Death");
 		}
 	}

@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11404354}
   - 95: {fileID: 9564036}
   - 212: {fileID: 21254696}
+  - 61: {fileID: 6188426}
   m_Layer: 0
   m_Name: SpecialVFX
   m_TagString: Untagged
@@ -166,6 +167,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.9000001, y: 5}
+--- !u!61 &6188426
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104976}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!95 &9564036
 Animator:
   serializedVersion: 3
@@ -211,6 +225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcd85570bc571846bad6cbf52603f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minPoison: 0
+  cooldown: 5
+  waitingCooldown: 0
+  damage: 20
+  timer: 0
 --- !u!114 &11406690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,8 +264,8 @@ MonoBehaviour:
   max: 100
   damageOverTime: 0
   damageBonus: 0
-  speedBonus: 0
-  poisonLevel: 0
+  speedBonus: 2.74000001
+  poisonLevel: 9
 --- !u!114 &11440968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,11 +289,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e97afcc605b7c499415544e8bcd94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _HP: 20
-  potionAmount: 0
-  moveRate: 0
-  damageAmount: 5
-  isAttacking: 0
+  MaxHp: 100
+  _currentHp: 0
+  PotionAmount: 0
+  MoveRate: 0
+  DamageAmount: 0
+  IsAttacking: 0
 --- !u!114 &11491960
 MonoBehaviour:
   m_ObjectHideFlags: 1
