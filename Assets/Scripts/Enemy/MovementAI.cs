@@ -16,6 +16,7 @@ public class MovementAI : MonoBehaviour {
 	public bool facingRight = false;
 	private bool _isGrounded = false;
 
+	private Enemy enemy;
 	private CliffDetection cliff;
 
 	public bool isGrounded {
@@ -27,12 +28,17 @@ public class MovementAI : MonoBehaviour {
 		animator = GetComponentInChildren<Animator> ();
 		attack = GetComponent<EnemyAttack>();
 
+		enemy = GetComponent<Enemy>();
+
 		cliff = GetComponentInChildren<CliffDetection>();
 		if (cliff == null)
 			Debug.Log("Cliff Detection not found");
 	}
 	
 	void Update() {
+		if (enemy.isDead)
+			return;
+
 		float distance = Vector3.Distance (target.position, transform.position);
 
 		if (distance > maxDistance && distance < minDistance) {
