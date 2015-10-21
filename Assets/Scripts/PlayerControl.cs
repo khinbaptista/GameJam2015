@@ -10,16 +10,11 @@ public class PlayerControl : MonoBehaviour
 	public bool secondJump = false;
 	public bool canSecondJump = true;
 	
-	public float moveForce = 365f;			// Amount of force added to move the player left and right.
-	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
-	//public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
-	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
-	//public AudioClip[] taunts;				// Array of clips for when the player taunts.
-	public float tauntProbability = 50f;	// Chance of a taunt happening.
-	public float tauntDelay = 1f;			// Delay for when the taunt should happen.
+	public float moveForce = 0.1f;			// Amount of force added to move the player left and right.
+	public float maxSpeed = 3f;				// The fastest the player can travel in the x axis.
+	public float jumpForce = 100f;			// Amount of force added when the player jumps.
 	
 	
-	private int tauntIndex;					// The index of the taunts array indicating the most recent taunt.
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private bool grounded = false;			// Whether or not the player is grounded.
 
@@ -63,17 +58,8 @@ public class PlayerControl : MonoBehaviour
 		float h = Input.GetAxis("Horizontal");
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		animator.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
-		
-		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-		if(h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
-			// ... add a force to the player.
-			GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
-		
-		// If the player's horizontal velocity is greater than the maxSpeed...
-		if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed)
-			// ... set the player's velocity to the maxSpeed in the x axis.
-			GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
-		
+
+        		
 		// If the input is moving the player right and the player is facing left...
 		if(h > 0 && !facingRight)
 			// ... flip the player.
@@ -82,9 +68,23 @@ public class PlayerControl : MonoBehaviour
 		else if(h < 0 && facingRight)
 			// ... flip the player.
 			Flip();
-		
-		// If the player should jump...
-		if(firstJump)
+
+        // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
+        //rigidbody2d.velocity = Vector2.right * h * moveForce;
+
+	    if (h > 0 || 0 > h)
+	    {
+	        Vector2 currentY = Vector2.zero;
+	        currentY.y = rigidbody2d.velocity.y;
+	        rigidbody2d.velocity = (Vector2.right*h*moveForce) + currentY;
+	    }
+	    else
+	    {
+            rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
+        }
+
+	    // If the player should jump...
+        if (firstJump)
 		{
 			// Set the Jump animator trigger parameter.
 			makeJump ();
@@ -119,14 +119,8 @@ public class PlayerControl : MonoBehaviour
 	void makeJump ()
 	{
 		animator.SetTrigger ("Jump");
-		
-		// Play a random jump audio clip.
-		//int i = Random.Range(0, jumpClips.Length);
-		//AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
-		
-		// Add a vertical force to the player.
-		rigidbody2d.AddForce (new Vector2 (0f, jumpForce));
-	}	
+        rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, jumpForce);
+    }	
 
 }
 		
