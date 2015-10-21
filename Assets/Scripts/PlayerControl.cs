@@ -100,7 +100,7 @@ public class PlayerControl : MonoBehaviour
 	}
 
 	void LateUpdate() {
-		if (playerHealth.isDead)
+		if (playerHealth.IsDead)
 			enabled = false;
 	}
 	

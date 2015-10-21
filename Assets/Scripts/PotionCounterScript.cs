@@ -8,7 +8,7 @@ public class PotionCounterScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         this._player = (Player)FindObjectOfType(typeof(Player));
-        string amount = this._player.potionAmount.ToString();
+        string amount = this._player.PotionAmount.ToString();
         foreach (Text text in GetComponents<Text>()){
             if(text.name == "PotionCountText"){
                 this._potionAmount = text;
@@ -19,7 +19,7 @@ public class PotionCounterScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        string amount = this._player.potionAmount.ToString();
+        string amount = this._player.PotionAmount.ToString();
         this._potionAmount.text = amount;
     }
 }

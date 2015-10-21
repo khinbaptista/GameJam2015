@@ -4,33 +4,36 @@ using System.Collections;
 public class Player : MonoBehaviour, IHitable {
 	
 	[SerializeField]
-	private float _HP = 4000;
-    private float _currentHP;
-    private Animator animator;
-    public int potionAmount;
-    public float moveRate;
-	public float damageAmount;
-	public bool isAttacking = false;
+	private float _maxHp;
+    private float _currentHp;
 
-	public bool isDead {
-		get { return _HP <= 0.0f; }
-	}
-	
-	public float HP {
-		get { return _HP; }
-        set { _HP = value; }
+    private Animator _animator;
+    public int PotionAmount;
+    public float MoveRate;
+	public float DamageAmount;
+
+	public bool IsAttacking = false;
+
+	public bool IsDead
+	{
+	    get { return _currentHp <= 0.0f; }
 	}
 
-    public float CurrentHP {
-        get { return _currentHP; }
-        set { _currentHP = value; }
+    public float MaxHp {
+		get { return _maxHp; }
+        set { _maxHp = value; }
+	}
+
+    public float CurrentHp {
+        get { return _currentHp; }
+        set { _currentHp = value; }
     }
     
 
     // Use this for initialization
     void Start () {
-        this._currentHP = this._HP;
-        animator = GetComponent<Animator> ();
+        this._currentHp = this._maxHp;
+        _animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -40,13 +43,13 @@ public class Player : MonoBehaviour, IHitable {
 	
 
 	public void OnHit(float attackPower) {
-		if (isDead)
+		if (IsDead)
 			return;
 
-		_HP -= attackPower;
-		if (isDead) {
-            _HP = 0;
-			animator.SetTrigger("Death");
+		_currentHp -= attackPower;
+		if (IsDead) {
+            _currentHp = 0;
+			_animator.SetTrigger("Death");
 		}
 	}
 }

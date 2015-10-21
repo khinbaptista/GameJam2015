@@ -3,24 +3,24 @@ using System.Collections;
 using UnityEngine.UI;   
 
 public class HPBarScript : MonoBehaviour {
-    public Player player;
-    public Image HPBar;
+    public Player Player;
+    public Image HpBar;
     private float _imageMaxSize;
     // Use this for initialization
     void Awake () {
-        this._imageMaxSize = HPBar.rectTransform.sizeDelta.x;
-        this.player = GameObject.FindObjectOfType<Player>();
+        this._imageMaxSize = HpBar.rectTransform.sizeDelta.x;
+        this.Player = GameObject.FindObjectOfType<Player>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        float imageCurrentSize = this._imageMaxSize * this.player.CurrentHP / this.player.HP;
+        float imageCurrentSize = this._imageMaxSize * this.Player.CurrentHp / this.Player.MaxHp;
 
-        HPBar.rectTransform.sizeDelta =
+        HpBar.rectTransform.sizeDelta =
             new Vector2(
                 imageCurrentSize,
-                HPBar.rectTransform.sizeDelta.y
+                HpBar.rectTransform.sizeDelta.y
             );      
 
 	}
