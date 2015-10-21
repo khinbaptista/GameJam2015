@@ -20,6 +20,7 @@ public class AttackTrigger : MonoBehaviour {
 		Debug.Log("Enemy hit");
 		if (enemy == null) return;
 		
-		enemy.OnHit(attackPower);
+		if (!enemy.IsDead)
+			enemy.OnHit(attackPower);
 	}
 }

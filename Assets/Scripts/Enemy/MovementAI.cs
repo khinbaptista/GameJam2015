@@ -16,6 +16,7 @@ public class MovementAI : MonoBehaviour {
 	public bool facingRight = false;
 	private bool _isGrounded = false;
 
+	private Enemy enemy;
 	private CliffDetection cliff;
 
 	public bool isGrounded {
@@ -27,15 +28,20 @@ public class MovementAI : MonoBehaviour {
 		animator = GetComponentInChildren<Animator> ();
 		attack = GetComponent<EnemyAttack>();
 
+		enemy = GetComponent<Enemy>();
+
 		cliff = GetComponentInChildren<CliffDetection>();
 		if (cliff == null)
 			Debug.Log("Cliff Detection not found");
 	}
 	
 	void Update() {
+		if (enemy.IsDead)
+			return;
+
 		float distance = Vector3.Distance (target.position, transform.position);
 
-		if (!cliff.isNearCliff && distance > maxDistance && distance < minDistance) {
+		if (distance > maxDistance && distance < minDistance) {
 			Vector3 dir = target.position - transform.position;
 			dir.Normalize();
 
@@ -45,8 +51,12 @@ public class MovementAI : MonoBehaviour {
 				Flip();
 
 			// Move towards player
-			transform.position += dir * moveSpeed * Time.deltaTime;
-			animator.SetBool("Walk", true);
+			if (!cliff.isNearCliff) {
+				transform.position += dir * moveSpeed * Time.deltaTime;
+				animator.SetBool("Walk", true);
+			}
+			else
+				animator.SetBool("Walk", false);
 		}
 		else {
 			animator.SetBool("Walk", false);

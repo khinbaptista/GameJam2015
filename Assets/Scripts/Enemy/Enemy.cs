@@ -4,7 +4,8 @@ using System.Collections;
 public class Enemy : MonoBehaviour, IHitable {
 
 	[SerializeField]
-	private float _maxHp;
+	private float _currentHp;
+
 	public float moveRate;
 	public float damageAmount;
 	public bool isAttacking = false;
@@ -12,8 +13,12 @@ public class Enemy : MonoBehaviour, IHitable {
 
 	private MovementAI movement;
 
-	public float MaxHp {
-		get { return _maxHp; }
+	public float CurrentHp {
+		get { return _currentHp; }
+	}
+
+	public bool IsDead {
+		get { return _currentHp <= 0; }
 	}
 
 	// Use this for initialization
@@ -28,8 +33,8 @@ public class Enemy : MonoBehaviour, IHitable {
 	}
 
 	public void OnHit(float attackPower) {
-		_maxHp -= attackPower;
-		if (_maxHp < 0) {
+		_currentHp -= attackPower;
+		if (_currentHp < 0) {
 			animator.SetTrigger("Death");
 		}
 	}

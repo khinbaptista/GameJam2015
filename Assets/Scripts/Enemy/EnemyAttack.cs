@@ -8,11 +8,15 @@ public class EnemyAttack : MonoBehaviour
 	public AudioSource hitSound;
 	
 	public Collider2D areaOfEffect;
-	
+	private Enemy enemy;
 	
 	public void Awake(){
 		animator = gameObject.GetComponent<Animator> ();
 		areaOfEffect.enabled = false;
+
+		enemy = GetComponent<Enemy>();
+		if (enemy == null)
+			Debug.Log("Enemy not found");
 	}
 	
 	// Use this for initialization
@@ -28,7 +32,7 @@ public class EnemyAttack : MonoBehaviour
 	}
 	
 	public void AttackStart() {
-		if (!isAttacking) {
+		if (!isAttacking && !enemy.IsDead) {
 			Debug.Log ("Enemy attack start");
 			isAttacking = true;
 			areaOfEffect.enabled = true;

@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Player : MonoBehaviour, IHitable {
 	
-	[SerializeField]
-	private float _maxHp;
+	
+	public float MaxHp = 100;
+
+    [SerializeField]
     private float _currentHp;
 
     private Animator _animator;
@@ -19,20 +21,17 @@ public class Player : MonoBehaviour, IHitable {
 	    get { return _currentHp <= 0.0f; }
 	}
 
-    public float MaxHp {
-		get { return _maxHp; }
-        set { _maxHp = value; }
-	}
-
-    public float CurrentHp {
+    public float CurrentHp
+    {
         get { return _currentHp; }
-        set { _currentHp = value; }
     }
-    
+
+
+
 
     // Use this for initialization
     void Start () {
-        this._currentHp = this._maxHp;
+        this._currentHp = this.MaxHp;
         _animator = GetComponent<Animator> ();
 	}
 	
@@ -46,7 +45,7 @@ public class Player : MonoBehaviour, IHitable {
 		if (IsDead)
 			return;
 
-		_currentHp -= attackPower;
+        _currentHp -= attackPower;
 		if (IsDead) {
             _currentHp = 0;
 			_animator.SetTrigger("Death");

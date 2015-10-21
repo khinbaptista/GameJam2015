@@ -2,7 +2,8 @@
 using System.Collections;
 
 public interface IHitable{
-	float MaxHp { get; }
+	float CurrentHp { get; }
+	bool IsDead { get; }
 
 	void OnHit(float damage);
 }
