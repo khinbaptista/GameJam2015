@@ -11,6 +11,10 @@ public class Player : MonoBehaviour, IHitable {
     public float moveRate;
 	public float damageAmount;
 	public bool isAttacking = false;
+
+	private bool isDead {
+		get { return _HP <= 0.0f; }
+	}
 	
 	public float HP {
 		get { return _HP; }
@@ -41,8 +45,11 @@ public class Player : MonoBehaviour, IHitable {
 	
 
 	public void OnHit(float attackPower) {
+		if (isDead)
+			return;
+
 		_HP -= attackPower;
-		if (_HP < 0) {
+		if (isDead) {
             _HP = 0;
 			animator.SetTrigger("Death");
 		}
