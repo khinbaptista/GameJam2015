@@ -7,12 +7,12 @@ public class Player : MonoBehaviour, IHitable {
 	private float _HP = 4000;
     private float _currentHP;
     private Animator animator;
-    private int _potionAmount;
+    public int potionAmount;
     public float moveRate;
 	public float damageAmount;
 	public bool isAttacking = false;
 
-	private bool isDead {
+	public bool isDead {
 		get { return _HP <= 0.0f; }
 	}
 	
@@ -25,12 +25,7 @@ public class Player : MonoBehaviour, IHitable {
         get { return _currentHP; }
         set { _currentHP = value; }
     }
-
-    public int PotionAmount
-    {
-        get { return _potionAmount; }
-        set { _potionAmount = value; }
-    }
+    
 
     // Use this for initialization
     void Start () {
