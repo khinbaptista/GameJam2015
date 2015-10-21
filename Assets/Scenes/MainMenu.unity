@@ -181,6 +181,8 @@ GameObject:
   - 4: {fileID: 520563945}
   - 23: {fileID: 520563944}
   - 102: {fileID: 520563943}
+  - 114: {fileID: 520563946}
+  - 61: {fileID: 520563947}
   m_Layer: 0
   m_Name: StartButton
   m_TagString: Untagged
@@ -245,6 +247,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &520563946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 520563942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c34ea0ffb02fb143ba085d80b482dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &520563947
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 520563942}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 10.1500006, y: -2.29980469}
+  serializedVersion: 2
+  m_Size: {x: 20.3000011, y: 4.59960938}
 --- !u!1 &1108915854
 GameObject:
   m_ObjectHideFlags: 0
