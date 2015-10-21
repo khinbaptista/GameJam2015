@@ -186,11 +186,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479596, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 137638, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_Name
-      value: Monster1 (1)
+      value: Monster2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
@@ -232,11 +232,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479596, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 137638, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_Name
-      value: Monster1 (5)
+      value: Monster6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
@@ -282,7 +282,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 137638, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_Name
-      value: Monster1 (7)
+      value: Monster8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
@@ -375,7 +375,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479596, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
@@ -417,7 +417,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 455178, guid: c35b975befa827948ae17197d07d8959, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 9546936, guid: c35b975befa827948ae17197d07d8959, type: 2}
       propertyPath: m_Controller
@@ -505,11 +505,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479596, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 137638, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_Name
-      value: Monster1 (6)
+      value: Monster7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
@@ -551,11 +551,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479596, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 137638, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_Name
-      value: Monster1 (2)
+      value: Monster3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
@@ -597,15 +597,30 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479596, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 137638, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_Name
-      value: Monster1 (4)
+      value: Monster5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &758356577 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 127294, guid: cbe0be071716afc4d83856724fa51701, type: 2}
+  m_PrefabInternal: {fileID: 860125045}
+--- !u!114 &758356587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 758356577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b0aa9ae0b4a4f42900fd15f56d03db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &860125045
 Prefab:
   m_ObjectHideFlags: 0
@@ -685,15 +700,54 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479596, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 137638, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
       propertyPath: m_Name
-      value: Monster1 (3)
+      value: Monster4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1058509386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1058509388}
+  - 114: {fileID: 1058509387}
+  m_Layer: 0
+  m_Name: MonstersControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1058509387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1058509386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266610d21e5cb8e489abcf97a803670c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1058509388
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1058509386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.7224998, y: -.0170633793, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
 --- !u!1001 &2120671898
 Prefab:
   m_ObjectHideFlags: 0

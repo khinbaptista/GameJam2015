@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour, IHitable {
 	public float damageAmount;
 	public bool isAttacking = false;
 	private Animator animator;
-
+    private MonstersControl control;
 	private MovementAI movement;
 
 	public float CurrentHp {
@@ -23,8 +23,10 @@ public class Enemy : MonoBehaviour, IHitable {
 
 	// Use this for initialization
 	void Start () {
+        
 		movement = GetComponent<MovementAI>();
 		animator = GetComponent<Animator> ();
+        control = GetComponent<MonstersControl>();
 	}
 	
 	// Update is called once per frame
@@ -36,6 +38,7 @@ public class Enemy : MonoBehaviour, IHitable {
 		_currentHp -= attackPower;
 		if (_currentHp <= 0) {
 			animator.SetTrigger("Death");
+            control.decrementMonsterAlive();
 		}
 	}
 }
