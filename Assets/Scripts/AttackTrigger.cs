@@ -16,11 +16,11 @@ public class AttackTrigger : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter2D(Collider2D other) {
-		IHitable enemy = other.gameObject.GetComponent<IHitable>();
-		Debug.Log("Enemy hit");
-		if (enemy == null) return;
-		
-		if (!enemy.IsDead)
+        IHitable enemy = other.gameObject.GetComponent<IHitable>();
+        if (enemy == null) return;     
+        if (gameObject.CompareTag(other.gameObject.tag)) return;
+
+        if (!enemy.IsDead)
 			enemy.OnHit(attackPower);
 	}
 }

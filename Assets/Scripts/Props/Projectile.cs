@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour {
 	public Vector3 direction;
 
 	void Start () {
+		direction.Normalize();
 	}
 	
 	void Update () {

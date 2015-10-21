@@ -16,7 +16,7 @@ public class StartScript : MonoBehaviour{
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit.collider != null)
             {
-                Application.LoadLevel("forestScene");
+                Application.LoadLevel("Intro");
             }
         }
 
