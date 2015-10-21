@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 496162}
   - 61: {fileID: 6103384}
   - 114: {fileID: 11433676}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 495158}
   - 61: {fileID: 6111596}
   - 114: {fileID: 11497432}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CliffDetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   - 212: {fileID: 21260066}
   - 95: {fileID: 9527938}
   - 114: {fileID: 11480990}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Boss1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198652}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 85062c47508210b44b8e3aaaf4b77740, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -.00701425131, y: .565837562}
@@ -338,7 +338,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 85062c47508210b44b8e3aaaf4b77740, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 198652}
