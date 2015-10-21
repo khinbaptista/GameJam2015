@@ -22,6 +22,12 @@ public class Player : MonoBehaviour, IHitable {
         set { _currentHP = value; }
     }
 
+    public float PotionAmount
+    {
+        get { return _potionAmount; }
+        set { _potionAmount = value; }
+    }
+
     // Use this for initialization
     void Start () {
         this._currentHP = this._HP;
