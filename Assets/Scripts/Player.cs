@@ -37,8 +37,26 @@ public class Player : MonoBehaviour, IHitable {
 	
 	// Update is called once per frame
 	void Update () {
-				
-	}
+        if (Input.GetButtonDown("Heal"))
+        {
+            if (PotionAmount > 0)
+            {
+                PotionAmount--;
+                this._currentHp += 20;
+                if (_currentHp > MaxHp)
+                {
+                    _currentHp = MaxHp;
+                }
+            }
+        }
+
+        if (IsDead)
+        {
+            _currentHp = 0;
+            _animator.SetTrigger("Death");
+            this.enabled = false;
+        }
+    }
 	
 
 	public void OnHit(float attackPower) {
@@ -46,9 +64,6 @@ public class Player : MonoBehaviour, IHitable {
 			return;
 
         _currentHp -= attackPower;
-		if (IsDead) {
-            _currentHp = 0;
-			_animator.SetTrigger("Death");
-		}
+		
 	}
 }
