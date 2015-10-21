@@ -4,7 +4,7 @@ using System.Collections;
 public class CliffDetection : MonoBehaviour {
 
 	private int groundLayer;
-	private bool nearCliff = true;
+	private bool nearCliff;
 
 	public bool isNearCliff {
 		get { return nearCliff; }
