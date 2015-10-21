@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Projectile : MonoBehaviour {
 	[SerializeField]
-	private float speed;
+	private float speed = 5;
 
 	[SerializeField]
-	private float damage;
+	private float damage = 10;
 
 	[Tooltip("Leave Z component alone!")]
 	public Vector3 direction;
