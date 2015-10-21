@@ -16,6 +16,10 @@ public class Enemy : MonoBehaviour, IHitable {
 		get { return _HP; }
 	}
 
+	public bool isDead {
+		get { return _HP <= 0; }
+	}
+
 	// Use this for initialization
 	void Start () {
 		movement = GetComponent<MovementAI>();
@@ -29,7 +33,7 @@ public class Enemy : MonoBehaviour, IHitable {
 
 	public void OnHit(float attackPower) {
 		_HP -= attackPower;
-		if (_HP < 0) {
+		if (_HP <= 0) {
 			animator.SetTrigger("Death");
 		}
 	}
