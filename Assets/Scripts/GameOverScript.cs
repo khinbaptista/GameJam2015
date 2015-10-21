@@ -12,7 +12,7 @@ public class GameOverScript : MonoBehaviour {
 	void Update () {
         if (_player.isDead)
         {
-            foreach(GameObject go in transform)
+            foreach(Transform go in transform)
             {
                 go.gameObject.SetActive(true);
             }
