@@ -45,7 +45,7 @@ public class MovementAI : MonoBehaviour {
 				Flip();
 
 			// Move towards player
-			if (!cliff.isNearCliff) {
+			if (!cliff.isNearCliff || dir.x > 0 && facingRight || dir.x < 0 && !facingRight) {
 				transform.position += dir * moveSpeed * Time.deltaTime;
 				animator.SetBool("Walk", true);
 			}
