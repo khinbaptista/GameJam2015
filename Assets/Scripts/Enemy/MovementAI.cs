@@ -35,7 +35,7 @@ public class MovementAI : MonoBehaviour {
 	void Update() {
 		float distance = Vector3.Distance (target.position, transform.position);
 
-		if (!cliff.isNearCliff && distance > maxDistance && distance < minDistance) {
+		if (distance > maxDistance && distance < minDistance) {
 			Vector3 dir = target.position - transform.position;
 			dir.Normalize();
 
@@ -45,8 +45,12 @@ public class MovementAI : MonoBehaviour {
 				Flip();
 
 			// Move towards player
-			transform.position += dir * moveSpeed * Time.deltaTime;
-			animator.SetBool("Walk", true);
+			if (!cliff.isNearCliff) {
+				transform.position += dir * moveSpeed * Time.deltaTime;
+				animator.SetBool("Walk", true);
+			}
+			else
+				animator.SetBool("Walk", false);
 		}
 		else {
 			animator.SetBool("Walk", false);
