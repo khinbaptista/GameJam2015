@@ -52,7 +52,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -92,11 +92,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xMargin: 0
-  yMargin: 2
+  yMargin: 1
   xSmooth: 5
   ySmooth: 2
-  maxXAndY: {x: 20, y: 5}
-  minXAndY: {x: -7.21999979, y: -5}
+  maxXAndY: {x: 70.3000031, y: 2.70000005}
+  minXAndY: {x: -5.4000001, y: -2.5}
 --- !u!124 &12424996
 Behaviour:
   m_ObjectHideFlags: 1
