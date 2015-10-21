@@ -23,14 +23,15 @@ public class PlayerControl : MonoBehaviour
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private bool grounded = false;			// Whether or not the player is grounded.
 
-	private Animator animator;					// Reference to the player's animator component.
-	
+	private Animator animator;                  // Reference to the player's animator component.
+	private Rigidbody2D rigidbody;
 	
 	void Awake()
 	{
 		// Setting up references.
 		groundCheck = transform.Find("groundCheck");
 		animator = GetComponent<Animator>();
+		rigidbody = GetComponent<Rigidbody2D>();
 	}
 	
 	
@@ -111,11 +112,13 @@ public class PlayerControl : MonoBehaviour
 	void makeJump ()
 	{
 		animator.SetTrigger ("Jump");
+		
 		// Play a random jump audio clip.
 		//int i = Random.Range(0, jumpClips.Length);
 		//AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
+		
 		// Add a vertical force to the player.
-		GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0f, jumpForce));
+		rigidbody.AddForce (new Vector2 (0f, jumpForce));
 	}	
 
 }
