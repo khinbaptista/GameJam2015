@@ -45,7 +45,7 @@ public class Poison : MonoBehaviour {
 	}
 
 	private void UpdateAnimationSpeed() {
-		anim.speed = 1 + SpeedBonus;
+		anim.SetFloat("AttackSpeedModifier", 1 + SpeedBonus);
 	}
 
 	// Use this for initialization
