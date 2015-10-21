@@ -22,7 +22,7 @@ public class Player : MonoBehaviour, IHitable {
         set { _currentHP = value; }
     }
 
-    public float PotionAmount
+    public int PotionAmount
     {
         get { return _potionAmount; }
         set { _potionAmount = value; }
