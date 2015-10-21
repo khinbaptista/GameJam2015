@@ -16,45 +16,46 @@ public class MovementAI : MonoBehaviour {
 	public bool facingRight = false;
 	private bool _isGrounded = false;
 
+	private CliffDetection cliff;
+
 	public bool isGrounded {
 		get { return _isGrounded; }
-		set { _isGrounded = value; }
 	}
 
 	void Start () {
 		target = GameObject.Find("Character").transform;
 		animator = GetComponentInChildren<Animator> ();
 		attack = GetComponent<EnemyAttack>();
+
+		cliff = GetComponentInChildren<CliffDetection>();
+		if (cliff == null)
+			Debug.Log("Cliff Detection not found");
 	}
 	
 	void Update() {
 		float distance = Vector3.Distance (target.position, transform.position);
-		if (distance > maxDistance && distance < minDistance) {
-			// Get a direction vector from us to the target
-			Vector3 dir = target.position - transform.position;
-			
-			// Normalize it so that it's a unit direction vector
-			dir.Normalize ();
 
+		if (!cliff.isNearCliff && distance > maxDistance && distance < minDistance) {
+			Vector3 dir = target.position - transform.position;
+			dir.Normalize();
 
 			if (dir.x > 0 && !facingRight)
-				Flip ();
+				Flip();
 			else if (dir.x < 0 && facingRight)
-				Flip ();
+				Flip();
 
-			// Move ourselves in that direction
+			// Move towards player
 			transform.position += dir * moveSpeed * Time.deltaTime;
-			animator.SetBool ("Walk", true);
-		} else if (distance < maxDistance) {
-			animator.SetBool ("Walk", false);
-			attack.AttackStart ();
-		} else {
-			animator.SetBool ("Walk", false);
+			animator.SetBool("Walk", true);
+		}
+		else {
+			animator.SetBool("Walk", false);
+
+			if (distance < maxDistance)
+				attack.AttackStart ();
 		}
 	}
 	
-
-
 	void Flip ()
 	{
 		facingRight = !facingRight;
