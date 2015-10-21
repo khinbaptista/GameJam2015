@@ -11,6 +11,11 @@ public class ContinueButtonScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	    
 	}
+
+    public void RestartLevel()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
 }
