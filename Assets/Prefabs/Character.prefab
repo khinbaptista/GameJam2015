@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max: 100
-  damageOverTime: 0
+  damageOverTime: 5
   damageBonus: 0
   speedBonus: 2.74000001
   deltaPoison: 5
