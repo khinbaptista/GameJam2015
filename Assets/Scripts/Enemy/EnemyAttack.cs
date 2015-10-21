@@ -37,9 +37,12 @@ public class EnemyAttack : MonoBehaviour
 			isAttacking = true;
 			areaOfEffect.enabled = true;
 			animator.SetTrigger("Attack");
-			hitSound.Play();
 			Debug.Log("Trigger set");
 		}
+	}
+
+	public void playAttackSound() {
+		hitSound.Play();
 	}
 	
 	public void AttackEnd() {
