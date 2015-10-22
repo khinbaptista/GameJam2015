@@ -316,10 +316,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30770e77c25d8c44a80dc3ecebc625d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endText: 0
   speech: {fileID: 2121012493}
   letterPause: .0199999996
-  typeSound1: {fileID: 0}
-  typeSound2: {fileID: 0}
 --- !u!114 &392783984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +483,10 @@ Prefab:
     - target: {fileID: 470516, guid: 5448bb20b849948468e6db251d92db34, type: 2}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246090, guid: 5448bb20b849948468e6db251d92db34, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5448bb20b849948468e6db251d92db34, type: 2}
