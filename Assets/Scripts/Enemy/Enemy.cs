@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour, IHitable {
 	public float moveRate;
 	public float damageAmount;
 	public bool isAttacking = false;
+	public float potionChance;
 	private Animator animator;
     private MonstersControl control;
 	private MovementAI movement;
@@ -46,6 +47,12 @@ public class Enemy : MonoBehaviour, IHitable {
 		_currentHp -= attackPower;
 		if (_currentHp <= 0) {
 			animator.SetTrigger("Death");
+			if(Random.value < potionChance) {
+				GameObject potion = (GameObject)Instantiate(Resources.Load("Potion"));
+				Vector2 potionPos = this.transform.position;
+				potionPos.y += 2;
+				potion.transform.position = potionPos;
+			}
             control.decrementMonsterAlive();
 		}
 	}

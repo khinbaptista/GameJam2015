@@ -468,6 +468,7 @@ MonoBehaviour:
   moveRate: 0
   damageAmount: 0
   isAttacking: 0
+  potionChance: 0
   minimumPoison: 0
 --- !u!114 &11494120
 MonoBehaviour:
