@@ -11,6 +11,9 @@ public class Projectile : MonoBehaviour {
     [SerializeField]
     private float maximumDifference = 10;
 
+    [SerializeField]
+    private Collider2D startBound;
+
 	[Tooltip("Leave Z component alone!")]
 	public Vector3 direction;
 
@@ -22,21 +25,17 @@ public class Projectile : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (Mathf.Abs(transform.position.x - originalPosition.x) > maximumDifference) {
-            direction = -direction;
-            originalPosition = transform.position;
-        } else {
-            transform.position += direction * speed * Time.deltaTime;
+        transform.position += direction * speed * Time.deltaTime;
+        if (transform.position.x <= startBound.transform.position.x) {
+            transform.position = originalPosition;
         }
 	}
 
 	public void OnTriggerEnter2D(Collider2D other) {
 		IHitable victim = other.GetComponent<IHitable>();
-
-		if (victim != null) {
+        if (other.gameObject == GameObject.Find("Character")) {
 			victim.OnHit(damage);
+            Destroy(gameObject);
 		}
-
-		Destroy(gameObject);
 	}
 }
