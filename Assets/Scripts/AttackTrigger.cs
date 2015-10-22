@@ -4,12 +4,11 @@ using System.Collections;
 public class AttackTrigger : MonoBehaviour {
 
 	public float attackPower;
-
-	private Poison poison;
+	public float attackBonus;
 
 	// Use this for initialization
 	void Start () {
-		poison = GetComponent<Poison>();
+
 	}
 	
 	// Update is called once per frame
@@ -23,6 +22,6 @@ public class AttackTrigger : MonoBehaviour {
         if (gameObject.CompareTag(other.gameObject.tag)) return;
 
         if (!enemy.IsDead)
-			enemy.OnHit(attackPower + poison.DamageBonus);
+			enemy.OnHit(attackPower + attackBonus);
 	}
 }

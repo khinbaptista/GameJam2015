@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class Poison : MonoBehaviour {
+	private AttackTrigger atk;
+
 
 	[SerializeField]
 	private float max = 100;
@@ -30,6 +32,7 @@ public class Poison : MonoBehaviour {
 		set {
 			poisonLevel = Mathf.Clamp(value, 0f, max);
 			UpdateAnimationSpeed();
+			UpdateAttackTriggerbonus();
 		}
 
 		get { return poisonLevel; }
@@ -55,10 +58,15 @@ public class Poison : MonoBehaviour {
 		anim.SetFloat("AttackSpeedModifier", 1 + SpeedBonus);
 	}
 
+	private void UpdateAttackTriggerbonus() {
+		atk.attackBonus = DamageBonus;
+	}
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
 		player = GetComponent<Player>();
+		atk = GetComponent<AttackTrigger>();
 	}
 	
 	// Update is called once per frame
