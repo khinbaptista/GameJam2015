@@ -13,7 +13,7 @@ public class PoisonVFX : MonoBehaviour {
 	}
 
 	public void Play() {
-		Debug.Log("Play poison VFX!");
+		//Debug.Log("Play poison VFX!");
 		anim.SetTrigger("Play");
 	}
 }
