@@ -3,11 +3,11 @@ using System.Collections;
 
 public class TextDelete : MonoBehaviour {
 
-	private GameObject text;
+	public GameObject text;
 
 	// Use this for initialization
 	void Start () {
-		text = GameObject.Find ("Speech1");
+		
 	}
 	
 	// Update is called once per frame
@@ -19,7 +19,7 @@ public class TextDelete : MonoBehaviour {
 		Debug.Log ("Chamou");
 		if (other.gameObject.name == "Character") {
 			Debug.Log ("Entrou");
-			Destroy (text);
+			text.SetActive(false);
 		}
 	}
 }
