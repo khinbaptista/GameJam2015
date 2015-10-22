@@ -450,6 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0852fe5dd13fe8146b7c4363185b2861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsAttacking: 0
   hitSound: {fileID: 0}
   areaOfEffect: {fileID: 6103384}
 --- !u!114 &11466260

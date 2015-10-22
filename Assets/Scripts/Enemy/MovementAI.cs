@@ -44,6 +44,7 @@ public class MovementAI : MonoBehaviour {
 	        return;
 
 		float distance = Vector3.Distance (target.position, transform.position);
+
 		if (distance > maxDistance && distance < minDistance) {
 			Vector3 dir = target.position - transform.position;
 			dir.Normalize();

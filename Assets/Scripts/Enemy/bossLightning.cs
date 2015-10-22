@@ -22,7 +22,7 @@ public class bossLightning : MonoBehaviour {
 			this.gameObject.transform.position = gameObject.transform.parent.TransformPoint (Random.Range(-5, 5), this.gameObject.transform.parent.position.y + 10, 0);
 			isActive = true;
 			animator.SetBool("Active", true);
-			Debug.Log (this.gameObject.transform.position.x + " " + GameObject.Find("Character").transform.position.x);
+
 			if(this.gameObject.transform.position.x > (GameObject.Find("Character").transform.position.x - 1)) {
 				if(this.gameObject.transform.position.x < (GameObject.Find("Character").transform.position.x + 1)) {
 					player.OnHit(lightDamage);
