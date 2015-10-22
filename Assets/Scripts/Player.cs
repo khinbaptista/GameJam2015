@@ -31,7 +31,6 @@ public class Player : MonoBehaviour, IHitable {
 
     // Use this for initialization
     void Start () {
-        this._currentHp = this.MaxHp;
         _animator = GetComponent<Animator> ();
 	}
 	

@@ -33,7 +33,7 @@ public class TextTyperScript : MonoBehaviour
                 
                 speech.SetActive(false);
 
-                GameObject character = GameObject.Find("Character");
+                GameObject character = GameObject.FindGameObjectWithTag("Player");
                 MovementIntroAI mv = character.GetComponentInChildren<MovementIntroAI>();
                 mv.enabled = true;
                 mv.SendMessage("Flip");
