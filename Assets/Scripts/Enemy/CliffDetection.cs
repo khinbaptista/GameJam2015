@@ -15,7 +15,7 @@ public class CliffDetection : MonoBehaviour {
 		Debug.Log("Ground layer is " + groundLayer);
 	}
 
-	public void OnTriggerEnter2D(Collider2D other) {
+	public void OnTriggerStay2D(Collider2D other) {
 		if (other.gameObject.layer == groundLayer)
 			nearCliff = false;
     }
