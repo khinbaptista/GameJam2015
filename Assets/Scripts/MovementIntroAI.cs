@@ -28,17 +28,13 @@ public class MovementIntroAI : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         
         
-        Flip();
-
-        MovementIntroAI mv = GetComponentInChildren<MovementIntroAI>();
-        mv.enabled = false ;
     }
 
     void Update()
     {
-
+        lookAtTarget();
         float distance = Vector3.Distance(target.position, transform.position);
-        if (transform.position != target.position)
+        if (distance>1)
         {
             Vector3 dir = target.position - transform.position;
             dir.Normalize();
@@ -48,10 +44,16 @@ public class MovementIntroAI : MonoBehaviour
         else
         {
             animator.SetFloat("Speed", 0f);
-
-            if (distance < maxDistance)
-                attack.AttackStart();
+            
         }
+    }
+
+    void lookAtTarget()
+    {
+        Vector3 dir = target.transform.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime*1);
     }
 
     void Flip()

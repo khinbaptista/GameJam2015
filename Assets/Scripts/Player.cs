@@ -24,6 +24,7 @@ public class Player : MonoBehaviour, IHitable {
     public float CurrentHp
     {
         get { return _currentHp; }
+        set { _currentHp = value; }
     }
 
 
