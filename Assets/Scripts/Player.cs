@@ -59,11 +59,10 @@ public class Player : MonoBehaviour, IHitable {
     }
 	
 
-	public void OnHit(float attackPower) {
+	public void OnHit(float attackPower, float poison = 0) {
 		if (IsDead)
 			return;
 
         _currentHp -= attackPower;
-		
 	}
 }

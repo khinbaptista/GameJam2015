@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour, IHitable {
     private MonstersControl control;
 	private MovementAI movement;
 
+	[Range(0, 1)][Tooltip("Minimum level of poison (%) required to damage this actor")]
+	public float minimumPoison;
+
 	public float CurrentHp {
 		get { return _currentHp; }
 	}
@@ -23,7 +26,6 @@ public class Enemy : MonoBehaviour, IHitable {
 
 	// Use this for initialization
 	void Start () {
-        
 		movement = GetComponent<MovementAI>();
 		animator = GetComponent<Animator> ();
         control = GetComponent<MonstersControl>();
@@ -34,7 +36,13 @@ public class Enemy : MonoBehaviour, IHitable {
 	
 	}
 
-	public void OnHit(float attackPower) {
+	public void OnHit(float attackPower, float poison = 0) {
+		if (poison < minimumPoison) {
+			Debug.Log("Attack failed! Minimum poison required is " + minimumPoison
+				+ ", and the attack had poison " + poison);
+			return;
+		}
+
 		_currentHp -= attackPower;
 		if (_currentHp <= 0) {
 			animator.SetTrigger("Death");

@@ -75,7 +75,7 @@ public class Poison : MonoBehaviour {
 		}
 
 		if (poisonLevel > 0.0f) {
-			player.OnHit(damageOverTime * PoisonLevelScaled * Time.deltaTime);
+			player.OnHit(damageOverTime * PoisonLevelScaled * Time.deltaTime, PoisonLevelScaled);
 			PoisonLevel -= poisonDecreaseRate * Time.deltaTime;
 
 			if (poisonLevel < 0)
