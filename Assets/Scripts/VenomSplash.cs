@@ -6,14 +6,14 @@ public class VenomSplash : MonoBehaviour
 {
 
     private Image _splashImage;
-    private Player _player;
+    private Poison _poison;
     public int StartingSplashPercent = 60;
 
 
     public void Awake()
     {
         this._splashImage = gameObject.GetComponent<Image>();
-        this._player = GameObject.FindObjectOfType<Player>();
+        this._poison = GameObject.FindObjectOfType<Poison>();
     }
 
     // Use this for initialization
@@ -31,8 +31,9 @@ public class VenomSplash : MonoBehaviour
 
     private float BloodAlpha(int startingPercent)
     {
-        float maxStartingHp = _player.MaxHp * ((float)startingPercent / 100.0f);
-        float alpha = 1 - (_player.CurrentHp / maxStartingHp);
+        //float maxStartingPoison = _poison.max * ((float)startingPercent / 100.0f);
+        //float alpha = (_poison.PoisonLevel / maxStartingPoison);
+        float alpha = (_poison.PoisonLevelScaled);
         return Mathf.Clamp(alpha, 0, 1);
     } 
 }

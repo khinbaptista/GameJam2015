@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class Poison : MonoBehaviour {
-	[SerializeField]
-	private float max = 100;
+	public float max = 100;
 
 	[SerializeField] [Tooltip("this * poison% / s")]
 	private float damageOverTime = 5;
