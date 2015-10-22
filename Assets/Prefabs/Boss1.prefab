@@ -104,7 +104,6 @@ GameObject:
   - 95: {fileID: 9527938}
   - 114: {fileID: 11480990}
   - 114: {fileID: 11466260}
-  - 114: {fileID: 11447142}
   m_Layer: 11
   m_Name: Boss1
   m_TagString: Enemies
@@ -155,7 +154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.36999989, y: 2.23000002, z: -1}
+  m_LocalPosition: {x: 2.35104918, y: -.462465346, z: -1}
   m_LocalScale: {x: 1.82841241, y: 1.82841241, z: 1.82841241}
   m_Children:
   - {fileID: 496162}
@@ -215,9 +214,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: .159554914, y: -.0435852557}
+  m_Offset: {x: .0709280595, y: -.190457389}
   serializedVersion: 2
-  m_Size: {x: .680890501, y: .3607575}
+  m_Size: {x: .858143866, y: .654501498}
 --- !u!61 &6111596
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -419,26 +418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3626d3c055b8274980f41f5c091430c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPower: 5
+  attackPower: 80
   attackBonus: 0
---- !u!114 &11447142
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 198652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f27a57e9ae0250a489e1de0abcde50e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  maxDistance: 1
-  minDistance: 10
-  target: {fileID: 0}
-  animator: {fileID: 0}
-  attack: {fileID: 0}
-  facingRight: 0
 --- !u!114 &11460472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -464,9 +445,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27a57e9ae0250a489e1de0abcde50e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  maxDistance: 1
-  minDistance: 10
+  moveSpeed: 1.5
+  maxDistance: 1.5
+  minDistance: 3
   target: {fileID: 0}
   animator: {fileID: 0}
   attack: {fileID: 0}
