@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.62100005, y: -.39199999, z: -1}
+  m_LocalPosition: {x: 1.59519172, y: -.135860279, z: -1}
   m_LocalScale: {x: .730346382, y: .730346382, z: .730346382}
   m_Children:
   - {fileID: 478608}
@@ -229,7 +229,7 @@ Animator:
   m_GameObject: {fileID: 137638}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f9e6e3b05bbacba418e361595285454b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2caa7ab3c1e027540afcd14433743b4a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3626d3c055b8274980f41f5c091430c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPower: 5
+  attackPower: 20
   attackBonus: 0
 --- !u!114 &11441426
 MonoBehaviour:
@@ -305,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0852fe5dd13fe8146b7c4363185b2861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsAttacking: 0
   hitSound: {fileID: 0}
   areaOfEffect: {fileID: 6163976}
 --- !u!212 &21249250
@@ -352,6 +353,10 @@ Prefab:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a279bb9648bdfe7458c20d3cdf5a1994, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 137638}

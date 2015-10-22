@@ -21,7 +21,10 @@ public class AttackTrigger : MonoBehaviour {
         if (enemy == null) return;     
         if (gameObject.CompareTag(other.gameObject.tag)) return;
 
-        if (!enemy.IsDead)
-			enemy.OnHit(attackPower + attackBonus);
+	    if (!enemy.IsDead)
+	    {
+	        enemy.OnHit(attackPower + attackBonus);
+	        
+	    }
 	}
 }

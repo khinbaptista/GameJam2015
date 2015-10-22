@@ -3,12 +3,14 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour
 {
-	private bool isAttacking = false;
+	public bool IsAttacking = false;
 	private Animator animator;
 	public AudioSource hitSound;
 	
 	public Collider2D areaOfEffect;
 	private Enemy enemy;
+
+    private bool needDeactivateTrigger = false;
 	
 	public void Awake(){
 		animator = gameObject.GetComponent<Animator> ();
@@ -28,27 +30,31 @@ public class EnemyAttack : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update() {
-		
-	}
+
+        if (needDeactivateTrigger)
+            areaOfEffect.enabled = false;
+    }
 	
 	public void AttackStart() {
-		if (!isAttacking && !enemy.IsDead) {
-			Debug.Log ("Enemy attack start");
-			isAttacking = true;
-			areaOfEffect.enabled = true;
+		if (!IsAttacking && !enemy.IsDead) {
+			//Debug.Log ("Enemy attack start");
+			IsAttacking = true;
+			
 			animator.SetTrigger("Attack");
-			Debug.Log("Trigger set");
+			//Debug.Log("Trigger set");
 		}
 	}
 
-	public void playAttackSound() {
+	public void AttackHit() {
 		hitSound.Play();
+        areaOfEffect.enabled = true;
+	    needDeactivateTrigger = true;
 	}
 	
 	public void AttackEnd() {
-		Debug.Log("Enemy attack end");
-		isAttacking = false;
-		areaOfEffect.enabled = false;
+		//Debug.Log("Enemy attack end");
+		IsAttacking = false;
+		//areaOfEffect.enabled = false;
 	}
 	
 }

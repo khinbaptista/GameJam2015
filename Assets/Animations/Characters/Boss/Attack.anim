@@ -110,7 +110,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: .75
-    functionName: playAttackSound
+    functionName: AttackHit
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

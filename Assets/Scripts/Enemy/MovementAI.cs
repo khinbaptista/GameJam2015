@@ -38,6 +38,10 @@ public class MovementAI : MonoBehaviour {
 	void Update() {
 		if (enemy.IsDead)
 			return;
+	    if (attack.IsAttacking)
+	        return;
+	    if (target.GetComponent<Player>().IsDead)
+	        return;
 
 		float distance = Vector3.Distance (target.position, transform.position);
 		if (distance > maxDistance && distance < minDistance) {
