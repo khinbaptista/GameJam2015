@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.4578972, y: 1.98084092, z: -1}
+  m_LocalPosition: {x: 1.62100005, y: -.39199999, z: -1}
   m_LocalScale: {x: .730346382, y: .730346382, z: .730346382}
   m_Children:
   - {fileID: 478608}
@@ -134,9 +134,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: .159554914, y: -.0435852557}
+  m_Offset: {x: .0874981806, y: .0351480544}
   serializedVersion: 2
-  m_Size: {x: .680890501, y: .3607575}
+  m_Size: {x: .825003743, y: .413245499}
 --- !u!61 &6167664
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPower: 5
+  attackBonus: 0
 --- !u!114 &11441426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,9 +272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27a57e9ae0250a489e1de0abcde50e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  maxDistance: 1.70000005
-  minDistance: 10
+  moveSpeed: 3
+  maxDistance: .899999976
+  minDistance: 1.5
   target: {fileID: 0}
   animator: {fileID: 0}
   attack: {fileID: 0}
