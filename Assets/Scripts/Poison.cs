@@ -59,6 +59,7 @@ public class Poison : MonoBehaviour {
 
 	private void UpdateAttackTriggerbonus() {
 		atk.attackBonus = DamageBonus;
+		atk.poison = PoisonLevelScaled;
 	}
 
 	// Use this for initialization
@@ -75,7 +76,7 @@ public class Poison : MonoBehaviour {
 		}
 
 		if (poisonLevel > 0.0f) {
-			player.OnHit(damageOverTime * PoisonLevelScaled * Time.deltaTime, PoisonLevelScaled);
+			player.OnHit(damageOverTime * PoisonLevelScaled * Time.deltaTime);
 			PoisonLevel -= poisonDecreaseRate * Time.deltaTime;
 
 			if (poisonLevel < 0)

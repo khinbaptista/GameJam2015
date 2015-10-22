@@ -5,6 +5,7 @@ public class AttackTrigger : MonoBehaviour {
 
 	public float attackPower;
 	public float attackBonus;
+	public float poison;
 
 	// Use this for initialization
 	void Start () {
@@ -23,8 +24,7 @@ public class AttackTrigger : MonoBehaviour {
 
 	    if (!enemy.IsDead)
 	    {
-	        enemy.OnHit(attackPower + attackBonus);
-	        
+	        enemy.OnHit(attackPower + attackBonus, poison);
 	    }
 	}
 }
