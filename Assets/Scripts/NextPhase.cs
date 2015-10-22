@@ -7,14 +7,26 @@ public class NextPhase : MonoBehaviour
 
     public String nextSceneName;
 
-    private int NumberOfMonstersAlive 
+    private bool AllMonstersDead 
     {
-        get { return GameObject.FindGameObjectsWithTag("Enemies").Length; }
+        get
+        {
+            foreach (GameObject gameObject in GameObject.FindGameObjectsWithTag("Enemies"))
+            {
+                IHitable hitable = gameObject.GetComponent<IHitable>();
+                if (hitable == null)
+                    continue;
+                if (!gameObject.GetComponent<IHitable>().IsDead)
+                    return false;
+            }
+
+            return true;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (NumberOfMonstersAlive == 0) {
+        if (AllMonstersDead) {
             Application.LoadLevel(nextSceneName);
         }
 	}
