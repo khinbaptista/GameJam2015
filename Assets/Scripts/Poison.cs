@@ -2,9 +2,6 @@
 using System.Collections;
 
 public class Poison : MonoBehaviour {
-	private AttackTrigger atk;
-
-
 	[SerializeField]
 	private float max = 100;
 
@@ -19,6 +16,8 @@ public class Poison : MonoBehaviour {
 
 	private Animator anim;
 	private Player player;
+	public AttackTrigger atk;
+	public PoisonVFX vfx;
 
 	[SerializeField][Tooltip("Amount of poison increased at once")]
 	private float deltaPoison = 5;
@@ -66,13 +65,13 @@ public class Poison : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator>();
 		player = GetComponent<Player>();
-		atk = GetComponent<AttackTrigger>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("Poison")) {
 			AddPoison(deltaPoison);
+			vfx.Play();
 		}
 
 		if (poisonLevel > 0.0f) {
