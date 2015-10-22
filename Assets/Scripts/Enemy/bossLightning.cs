@@ -7,16 +7,18 @@ public class bossLightning : MonoBehaviour {
 	public float lightDamage;
 	private Player player;
 	private Animator animator;
+	private Enemy enemy;
 
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find("Character").GetComponent<Player>();
 		animator = GetComponent<Animator> ();
+		enemy = GetComponentInParent<Enemy> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if ((Random.value > 0.993) && !isActive) {
+		if ((Random.value > 0.993) && !isActive && !enemy.IsDead) {
 			this.gameObject.transform.position = gameObject.transform.parent.TransformPoint (Random.Range(-5, 5), this.gameObject.transform.parent.position.y + 10, 0);
 			isActive = true;
 			animator.SetBool("Active", true);
