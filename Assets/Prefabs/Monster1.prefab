@@ -130,13 +130,13 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123450}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: .0874981806, y: .0351480544}
   serializedVersion: 2
-  m_Size: {x: .825003743, y: .413245499}
+  m_Size: {x: 5, y: 5}
 --- !u!61 &6167664
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -295,7 +295,7 @@ MonoBehaviour:
   moveRate: 5
   damageAmount: 10
   isAttacking: 0
-  potionChance: .400000006
+  potionChance: 0
   minimumPoison: 0
 --- !u!114 &11489254
 MonoBehaviour:
@@ -360,6 +360,22 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a279bb9648bdfe7458c20d3cdf5a1994, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Offset.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Offset.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 137638}
