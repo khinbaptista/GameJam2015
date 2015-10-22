@@ -1,18 +1,21 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
-public class NextPhase : MonoBehaviour {
-    MonstersControl control;
+public class NextPhase : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-        control = GetComponent<MonstersControl>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (transform.position.x > 75.0f && control.getNumberOfMonsterAlive() == 0) {
-            Application.LoadLevel("desertScene");
+    public String nextSceneName;
+
+    private int NumberOfMonstersAlive 
+    {
+        get { return GameObject.FindGameObjectsWithTag("Enemies").Length; }
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (NumberOfMonstersAlive == 0) {
+            Application.LoadLevel(nextSceneName);
         }
 	}
 }
