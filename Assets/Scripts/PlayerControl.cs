@@ -127,7 +127,7 @@ public class PlayerControl : MonoBehaviour
         rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, jumpForce);
     }	
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionStay2D(Collision2D col)
     {
         if(col.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
