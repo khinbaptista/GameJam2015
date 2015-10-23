@@ -5,7 +5,7 @@ public class GameOverScript : MonoBehaviour {
     private Player _player;
 	// Use this for initialization
 	void Start () {
-        this._player = (Player)FindObjectOfType(typeof(Player));
+        this._player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 	}
 	
 	// Update is called once per frame
