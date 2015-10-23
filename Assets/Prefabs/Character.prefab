@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcd85570bc571846bad6cbf52603f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPoison: 0
+  minPoison: .400000006
   cooldown: 5
   waitingCooldown: 0
   damage: 20
@@ -319,13 +319,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max: 100
-  damageOverTime: 5
+  damageOverTime: 4
   damageBonus: 0
   speedBonus: 2.74000001
   atk: {fileID: 11491960}
   vfx: {fileID: 11405780}
   deltaPoison: 30
-  poisonDecreaseRate: 5
+  poisonDecreaseRate: 3
   poisonLevel: 0
 --- !u!114 &11440968
 MonoBehaviour:
@@ -474,6 +474,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damageOverTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: poisonDecreaseRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: minPoison
+      value: .400000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
