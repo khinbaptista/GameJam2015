@@ -896,6 +896,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11487802, guid: f69c996eee55aa84ea4106865367e872, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f69c996eee55aa84ea4106865367e872, type: 2}
   m_IsPrefabParent: 0
@@ -13950,6 +13954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHp: 10
+  MaxHp: 0
   moveRate: 10
   damageAmount: 0
   isAttacking: 0
@@ -13985,6 +13990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHp: 20
+  MaxHp: 0
   moveRate: 20
   damageAmount: 20
   isAttacking: 0

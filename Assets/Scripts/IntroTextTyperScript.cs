@@ -5,6 +5,7 @@ using System.Collections;
 public class IntroTextTyperScript : MonoBehaviour
 {
 
+    private bool _mouseEnabled = true;
     private bool _endText = false;
     public GameObject speech;
     private MovementIntroAI _mv;
@@ -36,11 +37,13 @@ public class IntroTextTyperScript : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                
-                speech.SetActive(false);
-
-                _mv.enabled = true; _mv.SendMessage("Flip");
-                GameObject.Find("PlayerCamera").GetComponentInChildren<SmoothFollow>().enabled = false;
+                if (_mouseEnabled)
+                {
+                    speech.SetActive(false);
+                    _mv.enabled = true;
+                    _mv.SendMessage("Flip");
+                    GameObject.Find("PlayerCamera").GetComponentInChildren<SmoothFollow>().enabled = false;
+                }
             }
         }
     }
