@@ -71,6 +71,12 @@ public class PlayerControl : MonoBehaviour
             makeJump();
             secondJump = false;
         }
+
+		//if (Input.GetAxis("Cheat1") == 1 && Input.GetAxis("Cheat2") == 1) {
+		if (Input.GetKeyDown(KeyCode.X)) {
+			Debug.Log("Cheat!");
+			Cheat();
+		}
     }
 	
 	
@@ -100,8 +106,6 @@ public class PlayerControl : MonoBehaviour
         {
             rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
         }
-
-
     }
 
     void LateUpdate() {
@@ -144,6 +148,11 @@ public class PlayerControl : MonoBehaviour
             animator.SetBool("Grounded", false);
         }
     }
+
+
+	private void Cheat() {
+		Application.LoadLevel("Ending");
+	}
 
 }
 		
