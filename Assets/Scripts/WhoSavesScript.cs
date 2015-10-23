@@ -1,32 +1,35 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System.Collections;
 
 public class WhoSavesScript : MonoBehaviour {
-
+    
 	// Use this for initialization
 	void Start () {
         GameObject toSave = GameObject.Find("ToSave");
         GameObject savior = GameObject.Find("Savior");
-        string pathMale = "Assets/Animations/Characters/Female/FemaleAC.controller";
-        string pathFemale = "Assets/Animations/Characters/Male/MaleAC.overrideController";
+
         Animator animToSave = toSave.GetComponentInChildren<Animator>();
         Animator animSavior = savior.GetComponentInChildren<Animator>();
+        RuntimeAnimatorController femaleAC = animSavior.runtimeAnimatorController;
+        RuntimeAnimatorController maleAC = animToSave.runtimeAnimatorController;
 
-        if (PlayerPrefs.GetInt("Payer") == 0)
+        if (PlayerPrefs.GetInt("Player") == 0)
         {
             animToSave.runtimeAnimatorController =
-                (RuntimeAnimatorController) AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(pathFemale);
+                femaleAC;
             animSavior.runtimeAnimatorController =
-                (RuntimeAnimatorController)AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(pathMale);
+                maleAC;
+            PlayerPrefs.SetInt("Player", 1);
         }
         else
         {
             animToSave.runtimeAnimatorController =
-                (RuntimeAnimatorController)AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(pathMale);
+                maleAC;
             animSavior.runtimeAnimatorController =
-                (RuntimeAnimatorController)AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(pathFemale);
+                femaleAC;
+            PlayerPrefs.SetInt("Player", 0);
         }
+        animSavior.Play("Dead");
 
     }
 	

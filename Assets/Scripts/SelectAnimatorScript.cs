@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System.Collections;
 
 public class SelectAnimatorScript : MonoBehaviour {
@@ -8,19 +7,11 @@ public class SelectAnimatorScript : MonoBehaviour {
 	void Start () {
 
         GameObject savior = GameObject.FindGameObjectWithTag("Player");
-        string pathMale = "Assets/Animations/Characters/Female/FemaleAC.controller";
-        string pathFemale = "Assets/Animations/Characters/Male/MaleAC.overrideController";
         Animator animSavior = savior.GetComponentInChildren<Animator>();
-
-        if (PlayerPrefs.GetInt("Payer") == 0)
+        RuntimeAnimatorController maleAC = GameObject.Find("Ghost").GetComponentInChildren<Animator>().runtimeAnimatorController;
+        if (PlayerPrefs.GetInt("Player") == 1)
         {
-            animSavior.runtimeAnimatorController =
-                (RuntimeAnimatorController)AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(pathFemale);
-        }
-        else
-        {
-            animSavior.runtimeAnimatorController =
-                (RuntimeAnimatorController)AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(pathMale);
+            animSavior.runtimeAnimatorController = maleAC;
         }
     }
 	

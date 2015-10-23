@@ -29,5 +29,8 @@ public class BossDeath : MonoBehaviour {
 	public void EndDeath() {
 		rigidbody2d.velocity = new Vector2 (0, 0);
 		ended = true;
-	}
+
+        GameObject.Find("Antidote").GetComponentInChildren<SpriteRenderer>().enabled = true;
+        GameObject.Find("Antidote").GetComponentInChildren<BoxCollider2D>().enabled = true;
+    }
 }
