@@ -1500,6 +1500,21 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 423344, guid: 84b504082025dd94b8da332c89f54baa, type: 2}
   m_PrefabInternal: {fileID: 225009673}
+--- !u!1 &234717643 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 177868, guid: 5448bb20b849948468e6db251d92db34, type: 2}
+  m_PrefabInternal: {fileID: 266819970}
+--- !u!114 &234717644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 234717643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c0505e932b11cf4aab5cacf2d104cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &237775940
 Prefab:
   m_ObjectHideFlags: 0
@@ -14278,7 +14293,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 433592, guid: cbe0be071716afc4d83856724fa51701, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11406690, guid: cbe0be071716afc4d83856724fa51701, type: 2}
       propertyPath: m_Enabled
@@ -14372,6 +14387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHp: 10
+  MaxHp: 0
   moveRate: 10
   damageAmount: 0
   isAttacking: 0
