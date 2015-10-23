@@ -131,6 +131,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a653cc068e0e0e743bc7e167ec57ea81, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &226612058
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 66.4700012
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.61999989
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 166892, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_Name
+      value: Potion (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &270454207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,6 +2382,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6eb83cefe36b2a347b620f38dfb8a3ff, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1692795764
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 37.0417442
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.4026947
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498268, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 166892, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+      propertyPath: m_Name
+      value: Potion (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5052ba8acc0734c439cd22cb0749022d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1724266520
 Prefab:
   m_ObjectHideFlags: 0
@@ -2925,7 +3017,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!1001 &2036129947
 Prefab:
   m_ObjectHideFlags: 0
