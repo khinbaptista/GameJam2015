@@ -1511,7 +1511,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11415456, guid: f5a97b1e8aae3334685293aba09ecd50, type: 2}
       propertyPath: nextSceneName
-      value: forestScene
+      value: bossScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5a97b1e8aae3334685293aba09ecd50, type: 2}
