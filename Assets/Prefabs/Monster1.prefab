@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.1899986, y: -.99000001, z: -1}
+  m_LocalPosition: {x: 7.15783644, y: 2.09568453, z: -1}
   m_LocalScale: {x: .730346382, y: .730346382, z: .730346382}
   m_Children:
   - {fileID: 478608}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   maxDistance: .899999976
-  minDistance: 1.5
+  minDistance: 3
   target: {fileID: 0}
   animator: {fileID: 0}
   attack: {fileID: 0}
@@ -296,7 +296,7 @@ MonoBehaviour:
   damageAmount: 10
   isAttacking: 0
   potionChance: .400000006
-  minimumPoison: 0
+  minimumPoison: .100000001
 --- !u!114 &11489254
 MonoBehaviour:
   m_ObjectHideFlags: 1
