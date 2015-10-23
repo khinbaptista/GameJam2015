@@ -206,6 +206,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11424498, guid: bf49db3be5160e14aa95c72510b137a9, type: 2}
+      propertyPath: m_Text
+      value: "Os inimigos n\xE3o recebem dano a menos que voc\xEA esteja envenenado"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf49db3be5160e14aa95c72510b137a9, type: 2}
   m_IsPrefabParent: 0
