@@ -68,6 +68,6 @@ public class SpecialAttack : MonoBehaviour {
 			return;
 
 		if (!victim.IsDead)
-			victim.OnHit(damage);
+			victim.OnHit(damage + poisonRef.DamageBonus, poisonRef.PoisonLevelScaled);
 	}
 }
