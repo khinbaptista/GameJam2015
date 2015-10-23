@@ -30,9 +30,12 @@ public class MovementIntroAI : MonoBehaviour
         
     }
 
+    void OnEnable()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
     void Update()
     {
-        lookAtTarget();
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance>1)
         {
@@ -44,7 +47,13 @@ public class MovementIntroAI : MonoBehaviour
         else
         {
             animator.SetFloat("Speed", 0f);
+
             
+        }
+        if (animator.GetFloat("Speed") == 0f)
+        {
+            GetComponentInChildren<MovementIntroAI>().enabled = false;
+
         }
     }
 
@@ -65,4 +74,17 @@ public class MovementIntroAI : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log(col.gameObject.name);
+
+        if (col.gameObject.name == "Savior")
+        {
+
+            GetComponentInChildren<MovementIntroAI>().enabled = false;
+        }
+        
+    }
+
 }
