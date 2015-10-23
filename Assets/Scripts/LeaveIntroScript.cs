@@ -15,7 +15,7 @@ public class LeaveIntroScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.name == "Character")
+        if (coll.gameObject.tag == "Player")
         {
             Application.LoadLevel("forestScene");
         }

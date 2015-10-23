@@ -5,8 +5,17 @@ using System.Collections;
 public class TextVerifierScript : MonoBehaviour {
     Text saviorLast, savior1, savior2, toSave1, toSave2;
     TextTyperScript scriptSaviorLast, scriptSavior1, scriptSavior2, scriptToSave1, scriptToSave2;
+    bool saviorText1Done = false;
+    bool saviorText2Done = false;
+    bool saviorLastTextDone = false;
+    bool toSaveText1Done = false;
+    bool toSaveText2Done = false;
+    GameObject savior, toSave;
     // Use this for initialization
     void Start() {
+        savior = GameObject.Find("Savior");
+        toSave = GameObject.Find("ToSave");
+
         foreach (Text texto in GetComponentsInChildren<Text>())
         {
 
@@ -39,11 +48,26 @@ public class TextVerifierScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        verifyToSaveText1();
-        verifyToSaveText2();
-        verifySaviorText1();
-        verifySaviorText2();
-        verifySaviorLastText();
+        if (!toSaveText1Done)
+        {
+            verifyToSaveText1();
+        }
+        if (!toSaveText2Done)
+        {
+            verifyToSaveText2();
+        }
+        if (!saviorText1Done)
+        {
+            verifySaviorText1();
+        }
+        if (!saviorText2Done)
+        {
+            verifySaviorText2();
+        }
+        if (!saviorLastTextDone)
+        {
+            verifySaviorLastText();
+        }
     }
 
     void verifyToSaveText1()
@@ -56,8 +80,22 @@ public class TextVerifierScript : MonoBehaviour {
                 toSave1.enabled = false;
                 savior1.enabled = true;
                 scriptSavior1.enabled = true;
-            }
 
+                savior.GetComponentInChildren<Player>().CurrentHp = 100;
+
+                savior.GetComponentInChildren<Animator>().Play("Idle");
+
+
+
+                savior.GetComponentInChildren<MovementIntroAI>().enabled = true;
+                savior.GetComponentInChildren<MovementIntroAI>().target = toSave.transform;
+                savior.GetComponentInChildren<MovementIntroAI>().enabled = false;
+                Vector3 theScale = savior.transform.localScale;
+                theScale.x *= -1;
+                savior.transform.localScale = theScale;
+                toSaveText1Done = true;
+
+            }
 
         }
     }
@@ -94,6 +132,8 @@ public class TextVerifierScript : MonoBehaviour {
                 savior2.enabled = true;
                 scriptSavior2.enabled = true;
 
+                toSave.GetComponentInChildren<Player>().CurrentHp = 0;
+
 
             }
 
@@ -108,11 +148,15 @@ public class TextVerifierScript : MonoBehaviour {
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                GameObject character = GameObject.FindGameObjectWithTag("Player");
+                GameObject character = GameObject.Find("ToSave");
                 GameObject player = GameObject.Find("Savior");
-                character.GetComponent<Player>().CurrentHp = 0f;
+                player.tag = "Player";
                 character.tag = "Untagged";
-                savior2.enabled = false;
+
+
+                
+
+                savior2.gameObject.SetActive(false);
                 saviorLast.enabled = true;
                 scriptSaviorLast.enabled = true;
             }
@@ -123,10 +167,15 @@ public class TextVerifierScript : MonoBehaviour {
     void verifySaviorLastText(){
         if (scriptSaviorLast.endText) {
             if (Input.GetButtonDown("Fire1")){
-                GameObject character = GameObject.FindGameObjectWithTag("Player");
-                MovementIntroAI mv = character.GetComponentInChildren<MovementIntroAI>();
+
+                GameObject.Find("Speech2").SetActive(false);
+                MovementIntroAI mv = savior.GetComponentInChildren<MovementIntroAI>();
+                mv.animator = savior.GetComponentInChildren<Animator>();
                 mv.enabled = true;
-                mv.SendMessage("Flip");
+                mv.target = GameObject.Find("DoorSprite").transform;
+                Vector3 theScale = savior.transform.localScale;
+                theScale.x *= -1;
+                savior.transform.localScale = theScale;
                 GameObject.Find("PlayerCamera").GetComponentInChildren<SmoothFollow>().enabled = false;
             }
 
