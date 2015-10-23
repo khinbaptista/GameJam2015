@@ -26,23 +26,27 @@ public class Attack : MonoBehaviour
 	}
 
 	void FixedUpdate ()	{
-		if ( Input.GetButtonDown ("Fire1") && !isAttacking) {
-			animator.SetTrigger("Attack");
-			Debug.Log("Trigger set");
+		if ( Input.GetButtonDown("Fire1") && !isAttacking) {
 			AttackStart();
+		}
+
+		if (Input.GetKeyDown(KeyCode.P)) {
+			Debug.Log("Is attacking? " + isAttacking);
 		}
 	}
 
 	public void AttackStart() {
-		Debug.Log("Atack start");
+		animator.SetBool("Attack", true);
+
 		isAttacking = true;
 		areaOfEffect.enabled = true;
 	}
 
 	public void AttackEnd() {
-		Debug.Log("Atack end");
 		isAttacking = false;
 		areaOfEffect.enabled = false;
+		
+		animator.SetBool("Attack", false);
 	}
 
 }
