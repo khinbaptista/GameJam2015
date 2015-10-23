@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour, IHitable {
 
 	[SerializeField]
 	private float _currentHp;
+	public float MaxHp;
 
 	public float moveRate;
 	public float damageAmount;
