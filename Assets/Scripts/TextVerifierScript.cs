@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class TextVerifierScript : MonoBehaviour {
+    IdentifierScript identifier;
     Text saviorLast, savior1, savior2, toSave1, toSave2;
     TextTyperScript scriptSaviorLast, scriptSavior1, scriptSavior2, scriptToSave1, scriptToSave2;
     bool saviorText1Done = false;
@@ -15,7 +16,7 @@ public class TextVerifierScript : MonoBehaviour {
     void Start() {
         savior = GameObject.Find("Savior");
         toSave = GameObject.Find("ToSave");
-
+        identifier = GameObject.Find("Speech2").GetComponentInChildren<IdentifierScript>();
         foreach (Text texto in GetComponentsInChildren<Text>())
         {
 
@@ -75,8 +76,9 @@ public class TextVerifierScript : MonoBehaviour {
 
         if (scriptToSave1.endText)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
             {
+                identifier.savior = !identifier.savior;
                 toSave1.enabled = false;
                 savior1.enabled = true;
                 scriptSavior1.enabled = true;
@@ -109,11 +111,13 @@ public class TextVerifierScript : MonoBehaviour {
 
         if (scriptSavior1.endText)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
             {
+                identifier.savior = !identifier.savior;
                 savior1.enabled = false;
                 toSave2.enabled = true;
                 scriptToSave2.enabled = true;
+                saviorText1Done = true;
             }
 
 
@@ -126,15 +130,16 @@ public class TextVerifierScript : MonoBehaviour {
 
         if (scriptToSave2.endText)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
             {
+                identifier.savior = !identifier.savior;
                 toSave2.gameObject.SetActive(false);
                 savior2.enabled = true;
                 scriptSavior2.enabled = true;
 
                 toSave.GetComponentInChildren<Player>().CurrentHp = 0;
 
-
+                toSaveText2Done = true;
             }
 
 
@@ -146,7 +151,7 @@ public class TextVerifierScript : MonoBehaviour {
 
         if (scriptSavior2.endText)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
             {
                 GameObject character = GameObject.Find("ToSave");
                 GameObject player = GameObject.Find("Savior");
@@ -159,6 +164,7 @@ public class TextVerifierScript : MonoBehaviour {
                 savior2.gameObject.SetActive(false);
                 saviorLast.enabled = true;
                 scriptSaviorLast.enabled = true;
+                saviorText2Done = true;
             }
 
         }
@@ -166,7 +172,9 @@ public class TextVerifierScript : MonoBehaviour {
 
     void verifySaviorLastText(){
         if (scriptSaviorLast.endText) {
-            if (Input.GetButtonDown("Fire1")){
+            if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
+            {
+                saviorLastTextDone = true;
 
                 GameObject.Find("Speech2").SetActive(false);
                 MovementIntroAI mv = savior.GetComponentInChildren<MovementIntroAI>();

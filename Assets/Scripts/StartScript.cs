@@ -10,6 +10,12 @@ public class StartScript : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
+        if (Input.GetKeyDown(KeyCode.JoystickButton7))
+        {
+                PlayerPrefs.SetInt("Player", 0);
+                Application.LoadLevel("Intro");
+            
+        }
 
         if (Input.GetMouseButtonDown(0))
         {

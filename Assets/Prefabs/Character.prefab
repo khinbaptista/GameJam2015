@@ -35,6 +35,7 @@ GameObject:
   - 114: {fileID: 11440968}
   - 114: {fileID: 11411364}
   - 114: {fileID: 11445216}
+  - 114: {fileID: 11489668}
   m_Layer: 9
   m_Name: Character
   m_TagString: Player
@@ -100,7 +101,7 @@ Transform:
   m_GameObject: {fileID: 189106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.43000007, y: 0, z: 0}
-  m_LocalScale: {x: 1.39437521, y: 2.18765473, z: 1}
+  m_LocalScale: {x: 2, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 433592}
   m_RootOrder: 1
@@ -123,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.65999985, y: -1.50300002, z: -1}
+  m_LocalPosition: {x: -10.2279997, y: -2.79099989, z: -1}
   m_LocalScale: {x: .173093632, y: .173093602, z: .173093602}
   m_Children:
   - {fileID: 464864}
@@ -356,6 +357,17 @@ MonoBehaviour:
   MoveRate: 0
   DamageAmount: 0
   IsAttacking: 0
+--- !u!114 &11489668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58eaa2e12c4d3b04fb8b1c9e133fb4f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11491960
 MonoBehaviour:
   m_ObjectHideFlags: 1

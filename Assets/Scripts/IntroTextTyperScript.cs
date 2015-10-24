@@ -35,10 +35,11 @@ public class IntroTextTyperScript : MonoBehaviour
     {
         if (_endText)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
             {
                 if (_mouseEnabled)
                 {
+                    _mouseEnabled = false;
                     speech.SetActive(false);
                     _mv.enabled = true;
                     _mv.SendMessage("Flip");
